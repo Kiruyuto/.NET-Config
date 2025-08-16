@@ -1,17 +1,26 @@
-<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<package>
   <metadata>
-    <id>KiruDotNetConfig</id>
+    <title>Kiruyuto's .NET Code style and config</title>
+    <id>Kiru.DotNet.Config</id>
+
     <authors>Kiruyuto</authors>
     <developmentDependency>true</developmentDependency>
     <description>A personal NuGet package containing rules and analyzers to share .NET code style and configuration across multiple projects.</description>
     <readme>docs\README.md</readme>
     <version>$version$</version>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Kiruyuto/.NET-Config</projectUrl>
+    <repository type="git" url="https://github.com/Kiruyuto/.NET-Config.git" branch="master" />
+
     <dependencies>
       <dependency id="SonarAnalyzer.CSharp" version="10.15.0.120848" />
       <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.14.15" />
       <dependency id="Microsoft.CodeAnalysis.BannedApiAnalyzers" version="4.14.0" />
     </dependencies>
   </metadata>
+
   <files>
     <file src="README.md" target="docs\" />
     <file src="src\**" target="" />

@@ -1,5 +1,6 @@
 is_global = true
 global_level = 0
+# https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names#naming-conventions
 
 dotnet_naming_style.non_private_static_field_style.capitalization = pascal_case
 
