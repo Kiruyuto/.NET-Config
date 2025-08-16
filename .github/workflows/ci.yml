@@ -29,4 +29,4 @@ jobs:
         with:
           nuget-version: 'latest'
       - name: "Pack"
-        run: nuget pack KiruDotNetConfig.nuspec -ForceEnglishOutput
+        run: nuget pack KiruDotNetConfig.nuspec -ForceEnglishOutput -Version 0.0.1
