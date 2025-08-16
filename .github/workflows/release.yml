@@ -4,7 +4,10 @@ on:
   push:
     branches: [ 'master' ]
 
-permissions: write-all
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
 
 jobs:
   release-please:
@@ -40,6 +43,7 @@ jobs:
     needs: 'release-please'
     if: ${{ needs.release-please.outputs.releases_created == 'true' }}
     timeout-minutes: 20
+    permissions: write-all
     steps:
       - name: 'Checkout repo'
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -47,3 +51,17 @@ jobs:
         uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
         with:
           dotnet-version: 9.0.304
+      - uses: nuget/setup-nuget@v2.0.1
+        with:
+          nuget-version: 'latest'
+      - name: "Pack"
+        run: nuget pack KiruDotNetConfig.nuspec -ForceEnglishOutput -OutputDirectory outputFiles
+      - name: 'Add GitHub package source'
+        run: |
+          dotnet nuget add source \
+          --username ${{ github.actor || github.repository_owner }} \
+          --password ${{ secrets.GITHUB_TOKEN }} \
+          --store-password-in-clear-text \
+          --name GitHub "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+      - name: 'Push to GitHub Packages'
+        run: dotnet nuget push ./outputFiles/*.nupkg --source 'GitHub' --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
