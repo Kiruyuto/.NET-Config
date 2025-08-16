@@ -5,7 +5,8 @@
     <authors>Kiruyuto</authors>
     <developmentDependency>true</developmentDependency>
     <description>A package to configure .NET coding style and static analysis</description>
-
+    <readme>docs\readme.md</readme>
+    
     <!-- Set using release-please -->
     <version>0.1.0</version>
 
@@ -18,6 +19,7 @@
 
   <!-- Add props / targets / editorconfig files to the package -->
   <files>
+    <file src="README.md" target="docs\" />
     <file src="src\**" target="" />
   </files>
 </package>
