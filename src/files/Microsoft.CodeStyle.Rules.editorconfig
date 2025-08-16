@@ -16,7 +16,8 @@ dotnet_diagnostic.IDE0005.severity = warning
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0007-ide0008
 dotnet_diagnostic.IDE0007.severity = suggestion
 
-# Add missing cases
+# Add missing cases to switch statement
+# Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0010
 dotnet_diagnostic.IDE0010.severity = silent
 
 # Use throw expression
