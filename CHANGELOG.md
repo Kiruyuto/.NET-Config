@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.2](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.1...config-1.1.2) (2025-08-16)
+
+
+### 🏡 Chore
+
+* Add .gitignore ([9b00efa](https://github.com/Kiruyuto/.NET-Config/commit/9b00efafa829246b48499d00c4300fef9e519f3b))
+* Rename package ([5537268](https://github.com/Kiruyuto/.NET-Config/commit/5537268b6c4b69ec4537384d6eeab4065b278815))
+
+
+### 🎨 Style
+
+* Adjust readme ([211bea5](https://github.com/Kiruyuto/.NET-Config/commit/211bea5dd02ee190678d2f262b5a576561d94ad6))
+
 ## [1.1.1](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.0...config-1.1.1) (2025-08-16)
 
 
