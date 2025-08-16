@@ -55,7 +55,7 @@ jobs:
         with:
           nuget-version: "latest"
       - name: "Pack"
-        run: nuget pack KiruDotNetConfig.nuspec -ForceEnglishOutput -OutputDirectory outputFiles -Version ${{ needs.release-please.outputs.version }}
+        run: nuget pack Kiru.DotNet.Config.nuspec -ForceEnglishOutput -OutputDirectory outputFiles -Version ${{ needs.release-please.outputs.version }}
       - name: "Add GitHub package source"
         run: dotnet nuget add source --username ${{ github.actor || github.repository_owner }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name GitHub "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
       - name: "Push to GitHub Packages"
