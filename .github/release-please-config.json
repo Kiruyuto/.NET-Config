@@ -13,18 +13,13 @@
       "component": "config",
       "changelog-path": "CHANGELOG.md",
       "release-type": "simple",
-      "bump-minor-pre-major": false,
-      "bump-patch-for-minor-pre-major": false,
       "component-no-space": true,
       "extra-files": [
         {
           "type": "xml",
-          "path": "KiruDotNetConfig.nuspec",
-          "xpath": "/package/metadata/version"
+          "path": "/KiruDotNetConfig.nuspec",
+          "xpath": "//package/metadata/version"
         }
-      ],
-      "exclude-paths": [
-        ".github"
       ]
     }
   },
