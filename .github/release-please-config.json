@@ -13,14 +13,7 @@
       "component": "config",
       "changelog-path": "CHANGELOG.md",
       "release-type": "simple",
-      "component-no-space": true,
-      "extra-files": [
-        {
-          "type": "xml",
-          "path": "/KiruDotNetConfig.nuspec",
-          "xpath": "//package/metadata/version"
-        }
-      ]
+      "component-no-space": true
     }
   },
   "plugins": [
