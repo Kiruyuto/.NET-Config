@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.0...config-1.1.1) (2025-08-16)
+
+
+### 📑 Documentation
+
+* Improve docs for IDE0010 ([42fc628](https://github.com/Kiruyuto/.NET-Config/commit/42fc6282379a5a0d19081fe6dd292e5d03008975))
+
 ## [1.1.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.0.0...config-1.1.0) (2025-08-16)
 
 
