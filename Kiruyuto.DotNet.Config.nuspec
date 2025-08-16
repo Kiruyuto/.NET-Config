@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <title>Kiruyuto's .NET Code style and config</title>
-    <id>Kiru.DotNet.Config</id>
+    <id>Kiruyuto.DotNet.Config</id>
 
     <authors>Kiruyuto</authors>
     <developmentDependency>true</developmentDependency>

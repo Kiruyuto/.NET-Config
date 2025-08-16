@@ -5,7 +5,7 @@ Personal set of rules and analyzers distributed as a NuGet package to share conf
 This config contains rules changed and fine-tuned to my personal and work needs as well as preferences.
 
 Dependencies:
-- See [.nuspec file](./Kiru.DotNet.Config.nuspec)
+- See [.nuspec file](./Kiruyuto.DotNet.Config.nuspec)
 
 (.editor)configs:
 - See [`src/files/` directory](./src/files/)

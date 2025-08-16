@@ -44,7 +44,7 @@ jobs:
     if: ${{ needs.release-please.outputs.releases_created == 'true' }}
     timeout-minutes: 20
     env:
-      PackageName: "Kiru.DotNet.Config.${{ needs.release-please.outputs.version }}.nupkg"
+      PackageName: "Kiruyuto.DotNet.Config.${{ needs.release-please.outputs.version }}.nupkg"
     permissions: write-all
     steps:
       - name: "Checkout repo"
@@ -57,7 +57,7 @@ jobs:
         with:
           nuget-version: "latest"
       - name: "Pack"
-        run: nuget pack Kiru.DotNet.Config.nuspec -ForceEnglishOutput -OutputDirectory outputFiles -Version ${{ needs.release-please.outputs.version }}
+        run: nuget pack Kiruyuto.DotNet.Config.nuspec -ForceEnglishOutput -OutputDirectory outputFiles -Version ${{ needs.release-please.outputs.version }}
       - name: "Push to NuGet"
         run: dotnet nuget push ./outputFiles/${{ env.PackageName }} --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.NUGET_KEY }}
       - name: "Add GitHub Packages source and push"
