@@ -8,8 +8,8 @@
     <version>$version$</version>
     <dependencies>
       <dependency id="SonarAnalyzer.CSharp" version="10.15.0.120848" />
-      <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.1.46" />
-      <dependency id="Microsoft.CodeAnalysis.BannedApiAnalyzers" version="3.3.3" />
+      <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.14.15" />
+      <dependency id="Microsoft.CodeAnalysis.BannedApiAnalyzers" version="3.3.4" />
     </dependencies>
   </metadata>
   <files>
