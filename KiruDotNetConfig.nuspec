@@ -5,7 +5,7 @@
     <authors>Kiruyuto</authors>
     <developmentDependency>true</developmentDependency>
     <description>A package to configure .NET coding style and static analysis</description>
-    <readme>docs\readme.md</readme>
+    <readme>docs\README.md</readme>
     
     <!-- Set using release-please -->
     <version>0.1.0</version>
