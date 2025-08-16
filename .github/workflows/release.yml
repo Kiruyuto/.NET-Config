@@ -55,7 +55,7 @@ jobs:
         with:
           nuget-version: 'latest'
       - name: "Pack"
-        run: nuget pack KiruDotNetConfig.nuspec -ForceEnglishOutput -OutputDirectory outputFiles
+        run: nuget pack KiruDotNetConfig.nuspec -ForceEnglishOutput -OutputDirectory outputFiles -Version ${{ needs.release-please.outputs.version }}
       - name: 'Add GitHub package source'
         run: |
           dotnet nuget add source \

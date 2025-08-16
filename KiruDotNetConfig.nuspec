@@ -5,7 +5,7 @@
     <developmentDependency>true</developmentDependency>
     <description>A package to configure .NET coding style and static analysis</description>
     <readme>docs\README.md</readme>
-    <version>0.0.0</version>
+    <version>$version$</version>
     <dependencies>
       <dependency id="SonarAnalyzer.CSharp" version="10.15.0.120848" />
       <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.1.46" />
