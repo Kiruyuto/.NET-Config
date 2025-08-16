@@ -12,7 +12,10 @@
       "component": "config",
       "changelog-path": "CHANGELOG.md",
       "release-type": "simple",
-      "component-no-space": true
+      "component-no-space": true,
+      "exclude-paths": [
+        ".github"
+      ]
     }
   },
   "plugins": [
