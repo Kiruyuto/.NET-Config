@@ -129,7 +129,7 @@ csharp_space_between_square_brackets = false
 
 # === Wrapping options === 
 csharp_preserve_single_line_blocks = true
-# This one should be enabled, but as of now it forces multiline "IFs", so nuh uh
+# This one should be disabled, but as of now it forces multiline "IFs", so nuh uh
 csharp_preserve_single_line_statements = true
 
 csharp_prefer_static_local_function = true
