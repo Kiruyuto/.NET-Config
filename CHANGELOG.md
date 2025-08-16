@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.3](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.2...config-1.1.3) (2025-08-16)
+
+
+### 🏡 Chore
+
+* Revert single-line-statements back to default value ([dea079f](https://github.com/Kiruyuto/.NET-Config/commit/dea079f0edcc32507a7b8f52c9809489764b83b1))
+
+
+### 📑 Documentation
+
+* Fix typo in docs ([5bab814](https://github.com/Kiruyuto/.NET-Config/commit/5bab814de9244f642b551f619360e86c661b0520))
+
 ## [1.1.2](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.1...config-1.1.2) (2025-08-16)
 
 
