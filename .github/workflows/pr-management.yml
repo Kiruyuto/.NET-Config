@@ -9,7 +9,10 @@ concurrency:
   group: '${{ github.head_ref || github.ref }}-${{ github.workflow }}'
   cancel-in-progress: true
 
-permissions: write-all
+permissions:
+  pull-requests: write
+  contents: read
+  issues: write
 
 jobs:
   validate-pr-title:
