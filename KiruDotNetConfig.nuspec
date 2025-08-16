@@ -3,7 +3,7 @@
     <id>KiruDotNetConfig</id>
     <authors>Kiruyuto</authors>
     <developmentDependency>true</developmentDependency>
-    <description>A package to configure .NET coding style and static analysis</description>
+    <description>A personal NuGet package containing rules and analyzers to share .NET code style and configuration across multiple projects.</description>
     <readme>docs\README.md</readme>
     <version>$version$</version>
     <dependencies>
