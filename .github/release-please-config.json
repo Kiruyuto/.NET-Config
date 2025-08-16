@@ -1,10 +1,11 @@
 {
   "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
-  "pull-request-title-pattern": "chore(${component}): ${version}",
+  "pull-request-title-pattern": "chore(${component}): Release v${version}",
   "group-pull-request-title-pattern": "chore(ci): Release `${branch}`",
-  "separate-pull-requests": false,
+  "component-no-space": true,
+  "separate-pull-requests": true,
   "prerelease": false,
-  "draft-pull-request": true,
+  "draft-pull-request": false,
   "pull-request-header": "👇 Changelog 👇",
   "include-v-in-tag": false,
   "packages": {
@@ -14,11 +15,12 @@
       "release-type": "simple",
       "bump-minor-pre-major": false,
       "bump-patch-for-minor-pre-major": false,
+      "component-no-space": true,
       "extra-files": [
         {
           "type": "xml",
-          "path": "/KiruDotNetConfig.nuspec",
-          "xpath": "//package/metadata/version"
+          "path": "KiruDotNetConfig.nuspec",
+          "xpath": "/package/metadata/version"
         }
       ],
       "exclude-paths": [
