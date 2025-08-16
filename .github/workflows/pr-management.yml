@@ -64,7 +64,7 @@ jobs:
             Ayo, @${{ github.actor }}! 🚨
 
             Your pull request title does not follow [Conventional Commits specification](https://www.conventionalcommits.org/en/v1.0.0/) and it looks like your title should be adjusted.
-            You can check configuration [here](https://github.com/SellPander/MinotiV2/blob/master/.github/workflows/pr-management.yml).
+            You can check configuration [here](https://github.com/${{ github.repository }}/blob/${{ github.event.repository.default_branch }}/.github/workflows/pr-management.yml).
 
             Details:
             ${{ steps.lint_pr_title.outputs.error_message }}
