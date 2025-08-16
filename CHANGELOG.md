@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.0.0...config-1.1.0) (2025-08-16)
+
+
+### 🚀 Features & Enhancements
+
+* Add various global `.editorconfigs` ([#13](https://github.com/Kiruyuto/.NET-Config/issues/13)) ([485add3](https://github.com/Kiruyuto/.NET-Config/commit/485add362859df1c7d365cf5d94569d9c355d7b9))
+
 ## 1.0.0 (2025-08-16)
 
 
