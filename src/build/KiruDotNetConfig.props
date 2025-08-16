@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
+    <ReportAnalyzer>true</ReportAnalyzer>
+
+    <!-- https://github.com/dotnet/runtime/issues/27005#issuecomment-408646070 -->
+    <Features>strict</Features>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/code-generation#deterministic -->
+    <Deterministic>true</Deterministic>
+
+    <!-- https://learn.microsoft.com/en-us/visualstudio/code-quality/install-net-analyzers -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9#enable-additional-rules -->
+    <AnalysisMode>All</AnalysisMode>
+    <AnalysisLevel>preview</AnalysisLevel>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9#treat-warnings-as-errors -->
+    <TreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</TreatWarningsAsErrors>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9#enable-on-build -->
+    <EnforceCodeStyleInBuild Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Include="global.editorconfig" />
+  </ItemGroup>
+</Project>

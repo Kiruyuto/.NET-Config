@@ -1,0 +1,17 @@
+<Project>
+  <!-- Register the editorconfig files to the project -->
+  <ItemGroup>
+    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.editorconfig" />
+  </ItemGroup>
+
+  <!-- Banned Symbols -->
+  <PropertyGroup>
+    <IncludeDefaultBannedSymbols Condition="$(IncludeDefaultBannedSymbols) == ''">true</IncludeDefaultBannedSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt"
+      Condition="$(IncludeDefaultBannedSymbols) == 'true'"
+      Visible="false" />
+  </ItemGroup>
+</Project>

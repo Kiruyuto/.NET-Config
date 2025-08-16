@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <!-- Package metadata -->
+    <id>KiruDotNetConfig</id>
+    <developmentDependency>true</developmentDependency>
+    <description>A package to configure .NET coding style and static analysis</description>
+
+    <!-- Set using release-please -->
+    <version>0.1.0</version>
+
+    <dependencies>
+      <dependency id="SonarAnalyzer.CSharp" version="10.15.0.120848" />
+      <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.1.46" />
+      <dependency id="Microsoft.CodeAnalysis.BannedApiAnalyzers" version="3.3.3" />
+    </dependencies>
+  </metadata>
+
+  <!-- Add props / targets / editorconfig files to the package -->
+  <files>
+    <file src="src\**" target="" />
+  </files>
+</package>
