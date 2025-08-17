@@ -5,3 +5,8 @@ global_level = 0
 # CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
 # Help link: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1591
 dotnet_diagnostic.CS1591.severity = none
+
+# CS8669: The annotation for nullable reference types should only be used in code within a '#nullable' annotations context. Auto-generated code requires an explicit '#nullable' directive in source.
+# Help link: No help link available. Removed from MS Docs.
+# For whatever reason, this rule applies to user code and not just generated code. (At least in Rider; VSC seems fine.)
+dotnet_diagnostic.CS8669.severity = none
