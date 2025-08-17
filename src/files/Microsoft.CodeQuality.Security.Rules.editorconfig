@@ -112,7 +112,8 @@ dotnet_diagnostic.CA1033.severity = none
 # CA1034: Nested types should not be visible
 # Help link: https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1034
 # Enabled: False, Severity: warning
-dotnet_diagnostic.CA1034.severity = warning
+# Note: Results in lots of errors while working with external APIs.
+dotnet_diagnostic.CA1034.severity = none
 
 # CA1036: Override methods on comparable types
 # Help link: https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1036
