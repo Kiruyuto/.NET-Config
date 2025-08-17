@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.2](https://github.com/Kiruyuto/.NET-Config/compare/config-1.2.1...config-1.2.2) (2025-08-17)
+
+
+### 🐛 Bug Fixes
+
+* Remove glob pattern from global editorconfig ([bb53ac1](https://github.com/Kiruyuto/.NET-Config/commit/bb53ac18875766f129f5409fd46ca575ce10c255))
+
+
+### 🏡 Chore
+
+* Disable `CS8669` generating false-positives ([7f5520b](https://github.com/Kiruyuto/.NET-Config/commit/7f5520b788003faf77edad782731328ff617b35a))
+
 ## [1.2.1](https://github.com/Kiruyuto/.NET-Config/compare/config-1.2.0...config-1.2.1) (2025-08-17)
 
 
