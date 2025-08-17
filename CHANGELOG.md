@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.3.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.2.2...config-1.3.0) (2025-08-17)
+
+
+### 🚀 Features & Enhancements
+
+* Add license ([ed517bf](https://github.com/Kiruyuto/.NET-Config/commit/ed517bf0fead150e24b0a7b5a65a6ea8b0edb4d6))
+
+
+### 🏡 Chore
+
+* Keep `CA1034` disabled by default to avoid multiple problem while working with external APIs ([21f3900](https://github.com/Kiruyuto/.NET-Config/commit/21f39007c926fd5132fce64cc8ef061143480a1a))
+
 ## [1.2.2](https://github.com/Kiruyuto/.NET-Config/compare/config-1.2.1...config-1.2.2) (2025-08-17)
 
 
