@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.3...config-1.2.0) (2025-08-17)
+
+
+### 🚀 Features & Enhancements
+
+* Add `EntityFrameworkCore` analyzers ([b6ef708](https://github.com/Kiruyuto/.NET-Config/commit/b6ef7087cb601d2fb3e9b2316a007777d4f561cf))
+
 ## [1.1.3](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.2...config-1.1.3) (2025-08-16)
 
 
