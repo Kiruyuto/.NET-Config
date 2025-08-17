@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Kiruyuto/.NET-Config/compare/config-1.2.0...config-1.2.1) (2025-08-17)
+
+
+### 🐛 Bug Fixes
+
+* Remove global editorconfig reference ([94bbea9](https://github.com/Kiruyuto/.NET-Config/commit/94bbea9b6b7b99e9e456c22d189103607e9bb28b))
+
 ## [1.2.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.1.3...config-1.2.0) (2025-08-17)
 
 
