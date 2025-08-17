@@ -1,9 +1,0 @@
-# global_level must be higher than the NET Analyzer files
-is_global = true
-global_level = 0
-
-[**/Migrations/*]
-generated_code = true
-dotnet_diagnostic.IDE0005.severity = none
-dotnet_diagnostic.S6588.severity = none
-dotnet_diagnostic.S1186.severity = none
