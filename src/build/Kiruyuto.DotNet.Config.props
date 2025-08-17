@@ -22,8 +22,4 @@
     <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?tabs=net-9#enable-on-build -->
     <EnforceCodeStyleInBuild Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</EnforceCodeStyleInBuild>
   </PropertyGroup>
-
-  <ItemGroup>
-    <EditorConfigFiles Include="global.editorconfig" />
-  </ItemGroup>
 </Project>
