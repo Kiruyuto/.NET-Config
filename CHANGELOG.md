@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.0...config-1.3.1) (2025-08-23)
+
+
+### 🏡 Chore
+
+* Disable `CA1032` rule ([339ba41](https://github.com/Kiruyuto/.NET-Config/commit/339ba4116fc538bbd96406b2a78f411b9054b225))
+
 ## [1.3.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.2.2...config-1.3.0) (2025-08-17)
 
 
