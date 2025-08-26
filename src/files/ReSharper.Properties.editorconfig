@@ -13,5 +13,5 @@ resharper_arrange_trailing_comma_in_multiline_lists_highlighting = error
 resharper_redundant_using_directive_highlighting = warning
 resharper_unused_type_global_highlighting = warning
 resharper_property_can_be_made_init_only_global_highlighting = warning
-resharper_csharp_max_line_length = 250
+resharper_csharp_max_line_length = 220
 resharper_max_attribute_length_for_same_line = 120
