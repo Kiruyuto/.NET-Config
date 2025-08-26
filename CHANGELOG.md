@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.1...config-1.3.2) (2025-08-26)
+
+
+### 🏡 Chore
+
+* Reduce max line length ([5f2b868](https://github.com/Kiruyuto/.NET-Config/commit/5f2b868f8715a23ef5b88fd2ade1610fbd42d982))
+
 ## [1.3.1](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.0...config-1.3.1) (2025-08-23)
 
 
