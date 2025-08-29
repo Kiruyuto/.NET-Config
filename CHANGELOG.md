@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.2...config-1.3.3) (2025-08-29)
+
+
+### 🏡 Chore
+
+* Disable forcing wrapping options ([a3f1622](https://github.com/Kiruyuto/.NET-Config/commit/a3f16225c9a2b3b1ec1ec777d321cba707fae081))
+
 ## [1.3.2](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.1...config-1.3.2) (2025-08-26)
 
 
