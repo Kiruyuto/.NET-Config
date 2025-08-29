@@ -12,7 +12,7 @@ csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true
 csharp_new_line_before_finally = true
-csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_object_initializers = true # Issue: https://youtrack.jetbrains.com/issue/RSRP-486359/csharpnewlinebeforemembersinobjectinitializers-true-doesnt-add-line-breaks-for-each-initializer
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 
@@ -128,8 +128,8 @@ csharp_space_between_parentheses = false
 csharp_space_between_square_brackets = false
 
 # === Wrapping options === 
-# csharp_preserve_single_line_blocks = true
-# csharp_preserve_single_line_statements = true # This one should be disabled, but as of now it forces multiline "IFs", so nuh uh
+csharp_preserve_single_line_blocks = true
+csharp_preserve_single_line_statements = true # This one should be disabled, but as of now it forces multiline "IFs", so nuh uh
 
 csharp_prefer_static_local_function = true
 dotnet_code_quality_unused_parameters = all
