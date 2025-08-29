@@ -128,9 +128,8 @@ csharp_space_between_parentheses = false
 csharp_space_between_square_brackets = false
 
 # === Wrapping options === 
-csharp_preserve_single_line_blocks = true
-# This one should be disabled, but as of now it forces multiline "IFs", so nuh uh
-csharp_preserve_single_line_statements = true
+# csharp_preserve_single_line_blocks = true
+# csharp_preserve_single_line_statements = true # This one should be disabled, but as of now it forces multiline "IFs", so nuh uh
 
 csharp_prefer_static_local_function = true
 dotnet_code_quality_unused_parameters = all
