@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.4](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.3...config-1.3.4) (2025-08-29)
+
+
+### 🐛 Bug Fixes
+
+* Use valid rule option ([908f4d9](https://github.com/Kiruyuto/.NET-Config/commit/908f4d9dd5fbe33710c9806cf1cd444534e1cfab))
+
+
+### 🏡 Chore
+
+* Provide resharper override for `object_initializers` option issues ([ac7f4bd](https://github.com/Kiruyuto/.NET-Config/commit/ac7f4bd55d87483cc4affb50ad27ecea1e704616))
+* Reenable forcing wrapping options and add issue note ([ac7f4bd](https://github.com/Kiruyuto/.NET-Config/commit/ac7f4bd55d87483cc4affb50ad27ecea1e704616))
+
 ## [1.3.3](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.2...config-1.3.3) (2025-08-29)
 
 
