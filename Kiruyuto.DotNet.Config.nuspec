@@ -18,7 +18,7 @@
       <dependency id="SonarAnalyzer.CSharp" version="10.15.0.120848" />
       <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.14.15" />
       <dependency id="Microsoft.CodeAnalysis.BannedApiAnalyzers" version="4.14.0" />
-      <dependency id="Microsoft.EntityFrameworkCore.Analyzers" version="9.0.8" />
+      <dependency id="Microsoft.EntityFrameworkCore.Analyzers" version="9.0.9" />
     </dependencies>
   </metadata>
 
