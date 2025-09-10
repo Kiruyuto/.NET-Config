@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.5](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.4...config-1.3.5) (2025-09-10)
+
+
+### 🏡 Chore
+
+* **dependencies:** Update dependency Microsoft.EntityFrameworkCore.Analyzers to 9.0.9 ([#27](https://github.com/Kiruyuto/.NET-Config/issues/27)) ([4be3dd7](https://github.com/Kiruyuto/.NET-Config/commit/4be3dd725f870b08ba4cc8e15f687fd2352d241a))
+
 ## [1.3.4](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.3...config-1.3.4) (2025-08-29)
 
 
