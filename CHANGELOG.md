@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.6](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.5...config-1.3.6) (2025-09-24)
+
+
+### 🏡 Chore
+
+* Disable problematic line break and wrapping options until resolved ([f4c8245](https://github.com/Kiruyuto/.NET-Config/commit/f4c8245b9853c58aaf930d2e9fbf3cbf19cf7cd0))
+
 ## [1.3.5](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.4...config-1.3.5) (2025-09-10)
 
 
