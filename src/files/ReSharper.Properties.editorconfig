@@ -18,4 +18,5 @@ resharper_max_attribute_length_for_same_line = 120
 
 # Help link: https://www.jetbrains.com/help/resharper/EditorConfig_CSHARP_LineBreaksPageSchema.html#resharper_csharp_wrap_object_and_collection_initializer_style
 # Note: Provides sort of override for "csharp_new_line_before_members_in_object_initializers = true/false" issues (https://youtrack.jetbrains.com/issue/RSRP-486359/csharpnewlinebeforemembersinobjectinitializers-true-doesnt-add-line-breaks-for-each-initializer)
-resharper_wrap_object_and_collection_initializer_style = chop_always
+# Disabled until all issues are resolved
+# resharper_wrap_object_and_collection_initializer_style = chop_always
