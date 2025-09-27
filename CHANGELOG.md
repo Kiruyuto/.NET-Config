@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.7](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.6...config-1.3.7) (2025-09-27)
+
+
+### 🏡 Chore
+
+* Add conditional CodeAnalysisTreatWarningsAsErrors ([e998b3f](https://github.com/Kiruyuto/.NET-Config/commit/e998b3fe4c719e35a8597d690cecc1ea6a29acb5))
+* Add ContinuousIntegrationBuild property for GitHub Actions ([31f15ed](https://github.com/Kiruyuto/.NET-Config/commit/31f15edf358edffaff6a5eab98ef0b6ffec7e5f7))
+* Add target to print ContinuousIntegrationBuild message in GitHub Actions ([1fd0d05](https://github.com/Kiruyuto/.NET-Config/commit/1fd0d050130309c435fb509706de6287305b1dff))
+
 ## [1.3.6](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.5...config-1.3.6) (2025-09-24)
 
 
