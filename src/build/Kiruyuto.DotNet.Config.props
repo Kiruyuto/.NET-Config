@@ -2,6 +2,11 @@
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>
+
+  <Target Name="PrintContinuousIntegrationMessage" BeforeTargets="Build" Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <Message Text="'ContinuousIntegrationBuild' is set to '$(ContinuousIntegrationBuild)'" Importance="high" />
+  </Target>
+
   <PropertyGroup>
     <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
     <ReportAnalyzer>true</ReportAnalyzer>
