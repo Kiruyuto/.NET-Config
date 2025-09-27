@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.8](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.7...config-1.3.8) (2025-09-27)
+
+
+### 🏡 Chore
+
+* Optimize Release builds and Enable 'GenerateDocumentationFile' ([a47c9c9](https://github.com/Kiruyuto/.NET-Config/commit/a47c9c9a214fb766f6070a4e690b49e7126e2add))
+
 ## [1.3.7](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.6...config-1.3.7) (2025-09-27)
 
 
