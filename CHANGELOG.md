@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.9](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.8...config-1.3.9) (2025-10-01)
+
+
+### 🏡 Chore
+
+* Update severity levels for IDE0058 (disable) ([5184278](https://github.com/Kiruyuto/.NET-Config/commit/51842788a0dd77cb003c67e413115af348da8bbd))
+
 ## [1.3.8](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.7...config-1.3.8) (2025-09-27)
 
 
