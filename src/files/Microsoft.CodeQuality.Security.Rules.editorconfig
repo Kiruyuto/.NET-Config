@@ -17,7 +17,7 @@ dotnet_diagnostic.CA1001.severity = warning
 # CA1002: Do not expose generic lists
 # Help link: https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1002
 # Enabled: False, Severity: warning
-dotnet_diagnostic.CA1002.severity = warning
+dotnet_diagnostic.CA1002.severity = none
 
 # CA1003: Use generic event handler instances
 # Help link: https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1003
