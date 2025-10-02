@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.10](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.9...config-1.3.10) (2025-10-02)
+
+
+### 🏡 Chore
+
+* Update severity level for CA1002 to none ([7af1739](https://github.com/Kiruyuto/.NET-Config/commit/7af173993666726db25ea6b5feb58f07f270069d))
+
 ## [1.3.9](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.8...config-1.3.9) (2025-10-01)
 
 
