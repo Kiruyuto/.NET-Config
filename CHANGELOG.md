@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.11](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.10...config-1.3.11) (2025-10-03)
+
+
+### 🏡 Chore
+
+* Enhance CI message to include project name ([6a841fb](https://github.com/Kiruyuto/.NET-Config/commit/6a841fbbd0255317d2b574a9606f9baff0647e12))
+* Update .gitignore to include various file types and directories for .NET and JS projects ([aff5a53](https://github.com/Kiruyuto/.NET-Config/commit/aff5a534c17421770980f99d4fcd1cda6543fd6a))
+
 ## [1.3.10](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.9...config-1.3.10) (2025-10-02)
 
 
