@@ -4,7 +4,7 @@
   </PropertyGroup>
 
   <Target Name="PrintContinuousIntegrationMessage" BeforeTargets="Build" Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <Message Text="'ContinuousIntegrationBuild' is set to '$(ContinuousIntegrationBuild)'" Importance="high" />
+    <Message Text="'ContinuousIntegrationBuild' is set to '$(ContinuousIntegrationBuild)' for '$(MSBuildProjectName)'" Importance="high" />
   </Target>
 
   <PropertyGroup>
