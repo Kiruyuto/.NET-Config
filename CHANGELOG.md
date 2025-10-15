@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.13](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.12...config-1.3.13) (2025-10-15)
+
+
+### 🐛 Bug Fixes
+
+* Simplify conditions for CodeAnalysisTreatWarningsAsErrors and EnforceCodeStyleInBuild ([fcd94de](https://github.com/Kiruyuto/.NET-Config/commit/fcd94de901587a58395600ddd9310b9888e60af5))
+
 ## [1.3.12](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.11...config-1.3.12) (2025-10-15)
 
 
