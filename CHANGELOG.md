@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.12](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.11...config-1.3.12) (2025-10-15)
+
+
+### 🏡 Chore
+
+* **dependencies:** Update dependency Microsoft.EntityFrameworkCore.Analyzers to 9.0.10 (.NET) ([#40](https://github.com/Kiruyuto/.NET-Config/issues/40)) ([50d0d11](https://github.com/Kiruyuto/.NET-Config/commit/50d0d11cd7d7457075910ab6c227a2a922a66953))
+* Update code style preferences in editorconfig files ([36a38d3](https://github.com/Kiruyuto/.NET-Config/commit/36a38d3dbb5b89201034976f6c5bae8521531d36))
+
 ## [1.3.11](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.10...config-1.3.11) (2025-10-03)
 
 
