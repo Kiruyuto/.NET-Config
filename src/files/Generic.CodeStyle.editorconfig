@@ -92,15 +92,16 @@ csharp_style_pattern_matching_over_as_with_null_check = true
 csharp_style_pattern_matching_over_is_with_cast_check = true
 csharp_style_inlined_variable_declaration = true
 
-# Null-checking preference
+# === Null-checking preference ===
 csharp_style_conditional_delegate_call = true
 csharp_style_throw_expression = true
 
-# Other features
+# === Other features ===
 csharp_style_prefer_index_operator = true
 csharp_style_prefer_range_operator = true
 csharp_style_pattern_local_over_anonymous_function = true
 dotnet_style_prefer_collection_expression = true
+csharp_prefer_static_anonymous_function = true
 
 # === Code block preferences ===
 csharp_prefer_braces = when_multiline

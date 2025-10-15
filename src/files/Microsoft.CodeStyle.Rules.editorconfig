@@ -190,3 +190,6 @@ dotnet_diagnostic.IDE1005.severity = suggestion
 
 # Remove unnecessary value assignment
 dotnet_diagnostic.IDE1006.severity = warning
+
+# Make anonymous function static
+dotnet_diagnostic.IDE0320.severity = error
