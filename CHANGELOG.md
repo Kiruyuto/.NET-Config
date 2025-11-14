@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.14](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.13...config-1.3.14) (2025-11-14)
+
+
+### 🏡 Chore
+
+* **dependencies:** Update .NET Major dependencies to v10 (dotnet) (major) ([#44](https://github.com/Kiruyuto/.NET-Config/issues/44)) ([c7f5aa9](https://github.com/Kiruyuto/.NET-Config/commit/c7f5aa94834199d78845b8ef1cf347732c1f6745))
+
 ## [1.3.13](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.12...config-1.3.13) (2025-10-15)
 
 
