@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.15](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.14...config-1.3.15) (2025-11-26)
+
+
+### 🏡 Chore
+
+* **dependencies:** Update .NET to 10.16.0.128591 (dotnet) ([#48](https://github.com/Kiruyuto/.NET-Config/issues/48)) ([7d2f3b8](https://github.com/Kiruyuto/.NET-Config/commit/7d2f3b89577e9239951bd079c0e1f6406f7d440b))
+
 ## [1.3.14](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.13...config-1.3.14) (2025-11-14)
 
 
