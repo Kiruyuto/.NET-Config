@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.17](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.16...config-1.3.17) (2025-12-10)
+
+
+### 🏡 Chore
+
+* **dependencies:** Update dependency Microsoft.EntityFrameworkCore.Analyzers to 10.0.1 (dotnet) ([#55](https://github.com/Kiruyuto/.NET-Config/issues/55)) ([910cd68](https://github.com/Kiruyuto/.NET-Config/commit/910cd683def46c19e8f65f5bfd55c9b3bdbc1645))
+
 ## [1.3.16](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.15...config-1.3.16) (2025-12-03)
 
 
