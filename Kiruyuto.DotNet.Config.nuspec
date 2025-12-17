@@ -15,7 +15,7 @@
     <repository type="git" url="https://github.com/Kiruyuto/.NET-Config.git" branch="master" />
 
     <dependencies>
-      <dependency id="SonarAnalyzer.CSharp" version="10.16.1.129956" />
+      <dependency id="SonarAnalyzer.CSharp" version="10.17.0.131074" />
       <dependency id="Microsoft.VisualStudio.Threading.Analyzers" version="17.14.15" />
       <dependency id="Microsoft.CodeAnalysis.BannedApiAnalyzers" version="4.14.0" />
       <dependency id="Microsoft.EntityFrameworkCore.Analyzers" version="10.0.1" />
