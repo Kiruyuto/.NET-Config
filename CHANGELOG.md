@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.18...config-2.0.0) (2025-12-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* Adjust some rules; Extend `BannedSymbols`; Improve maintainability ([#60](https://github.com/Kiruyuto/.NET-Config/issues/60))
+
+### 💅 Refactors
+
+* Adjust some rules; Extend `BannedSymbols`; Improve maintainability ([#60](https://github.com/Kiruyuto/.NET-Config/issues/60)) ([8f1308c](https://github.com/Kiruyuto/.NET-Config/commit/8f1308cbb0805bd59e693b1e9a6794f9ec092eb2))
+
 ## [1.3.18](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.17...config-1.3.18) (2025-12-17)
 
 
