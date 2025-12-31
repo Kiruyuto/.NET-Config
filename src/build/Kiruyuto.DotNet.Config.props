@@ -50,6 +50,25 @@
     <SymbolPackageFormat Condition="'$(SymbolPackageFormat)' == ''">snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
+  <!-- Attempt to fix rider-specific issue with globalconfig files -->
+  <ItemGroup>
+    <EditorConfigFilesToCopy Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
+  </ItemGroup>
+  <Target Name="CopyEditorConfig" BeforeTargets="BeforeBuild">
+    <Message Text="Copying the .globalconfig file from '@(EditorConfigFilesToCopy)' to '$(MSBuildProjectDirectory)'"></Message>
+    <Copy
+      SourceFiles="@(EditorConfigFilesToCopy)"
+      DestinationFolder="$(MSBuildProjectDirectory)"
+      SkipUnchangedFiles="true"
+      UseHardlinksIfPossible="false" />
+  </Target>
+  <Target Name="CleanEditorConfig" AfterTargets="Clean">
+    <ItemGroup>
+      <EditorConfigFilesToDelete Include="$(MSBuildProjectDirectory)\*.globalconfig" />
+    </ItemGroup>
+    <Delete Files="@(EditorConfigFilesToDelete)" />
+  </Target>
+
   <!-- Release specific settings -->
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>

@@ -5,16 +5,6 @@
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
   </ItemGroup>
 
-  <EditorConfigFilesToCopy Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
-  <Target Name="CopyEditorConfig" BeforeTargets="BeforeBuild">
-    <Message Text="Copying the .globalconfig file from '@(EditorConfigFilesToCopy)' to '$(MSBuildProjectDirectory)'"></Message>
-    <Copy
-      SourceFiles="@(EditorConfigFilesToCopy)"
-      DestinationFolder="$(MSBuildProjectDirectory)"
-      SkipUnchangedFiles="true"
-      UseHardlinksIfPossible="false" />
-  </Target>
-
   <!-- Register Banned Symbols -->
   <ItemGroup>
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
