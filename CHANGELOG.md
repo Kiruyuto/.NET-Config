@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.3](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.2...config-2.1.3) (2025-12-31)
+
+
+### 🐛 Bug Fixes
+
+* Refactor editor and global config file handling; remove obsolete targets ([28a9a33](https://github.com/Kiruyuto/.NET-Config/commit/28a9a33cc7f3c1e221cc005d390b847b8fb9913d))
+
 ## [2.1.2](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.1...config-2.1.2) (2025-12-31)
 
 
