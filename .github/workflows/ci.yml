@@ -29,3 +29,9 @@ jobs:
 
       - name: "Pack"
         run: nuget pack Kiruyuto.DotNet.Config.nuspec -ForceEnglishOutput -Version 0.0.1
+
+      - name: "Ensure scripts work"
+        shell: pwsh
+        run: |
+          ./PackAndRegister.ps1
+          ./RemovePackageAndUnregisterFeed.ps1
