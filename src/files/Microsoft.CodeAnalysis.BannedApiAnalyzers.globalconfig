@@ -1,0 +1,19 @@
+is_global = true # Default for .globalconfig files. Explicitly set for clarity.
+global_level = 101
+
+# ====================================================================================================
+# Description: Configuration for Microsoft.CodeAnalysis.BannedApiAnalyzers
+# Help link: https://github.com/dotnet/roslyn/blob/main/src/RoslynAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers/BannedApiAnalyzers.Help.md
+# ====================================================================================================
+
+# RS0030: Do not use banned APIs
+# Help link: https://github.com/dotnet/roslyn/blob/main/src/RoslynAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers.md#rs0030-do-not-use-banned-apis
+dotnet_diagnostic.RS0030.severity = warning
+
+# RS0031: The list of banned symbols contains a duplicate
+# Help link: https://github.com/dotnet/roslyn/blob/main/src/RoslynAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers.md#rs0031-the-list-of-banned-symbols-contains-a-duplicate
+dotnet_diagnostic.RS0031.severity = warning
+
+# RS0035: External access to internal symbols outside the restricted namespace(s) is prohibited
+# Help link: https://github.com/dotnet/roslyn/blob/main/src/RoslynAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers.md#rs0035-external-access-to-internal-symbols-outside-the-restricted-namespaces-is-prohibited
+dotnet_diagnostic.RS0035.severity = error

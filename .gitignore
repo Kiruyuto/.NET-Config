@@ -115,3 +115,5 @@ node_modules
 [Dd]esktop.ini
 .DS_Store
 .fleet
+
+nuget.exe
