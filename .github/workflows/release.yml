@@ -19,14 +19,14 @@ jobs:
       version: ${{ steps.run-release-please.outputs.version }}
     steps:
       - name: "Generate App Token"
-        uses: actions/create-github-app-token@v2.1.4
+        uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
         id: generate-token
         with:
           app-id: ${{ secrets.DEV_APP_ID }}
           private-key: ${{ secrets.DEV_APP_PRIVATE_KEY }}
       
       - name: "Run release-please"
-        uses: googleapis/release-please-action@v4.3.0
+        uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
         id: run-release-please
         with:
           token: ${{ steps.generate-token.outputs.token }}
@@ -53,11 +53,11 @@ jobs:
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
       
       - name: "Setup .NET"
-        uses: actions/setup-dotnet@v5.0.0
+        uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
         with:
           global-json-file: "global.json"
       
-      - uses: nuget/setup-nuget@v2.0.1
+      - uses: nuget/setup-nuget@323ab0502cd38fdc493335025a96c8fdb0edc71f # v2.0.1
         with:
           nuget-version: "latest"
       
