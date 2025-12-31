@@ -19,11 +19,11 @@ jobs:
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
       - name: "Setup .NET"
-        uses: actions/setup-dotnet@v5.0.0
+        uses: actions/setup-dotnet@2016bd2012dba4e32de620c46fe006a3ac9f0602 # v5.0.1
         with:
           global-json-file: "global.json"
 
-      - uses: nuget/setup-nuget@v2.0.1
+      - uses: nuget/setup-nuget@323ab0502cd38fdc493335025a96c8fdb0edc71f # v2.0.1
         with:
           nuget-version: "latest"
 
