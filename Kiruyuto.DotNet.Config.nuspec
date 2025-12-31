@@ -25,6 +25,6 @@
   <files>
     <file src="src\**" target="" />
     <file src="LICENSE.txt" target="" />
-    <file src="README.md" target="docs\" />
+    <file src="README.md" target="" />
   </files>
 </package>
