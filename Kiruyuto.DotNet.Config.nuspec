@@ -7,7 +7,7 @@
     <authors>Kiruyuto</authors>
     <developmentDependency>true</developmentDependency>
     <description>A personal NuGet package containing rules and analyzers to share .NET code style and configuration across multiple projects.</description>
-    <readme>docs\README.md</readme>
+    <readme>README.md</readme>
     <version>$version$</version>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE.txt</license>
