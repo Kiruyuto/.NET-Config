@@ -1,5 +1,52 @@
+# List of Banned APIs
+# Syntax:
+#  E:Event
+#  M:Method
+#  F:Field
+#  P:Property
+#  T:Type
+
 P:System.DateTime.Now;Use System.DateTime.UtcNow instead
 P:System.DateTimeOffset.Now;Use System.DateTimeOffset.UtcNow instead
+
+T:Newtonsoft.Json.JsonConvert;Use System.Text.Json.JsonSerializer instead
+
+M:System.Enum.TryParse(System.Type,System.String,System.Object);Use an overload with a ignoreCase argument
+M:System.Enum.TryParse(System.Type,System.ReadOnlySpan{System.Char},System.Object);Use an overload with a ignoreCase argument
+M:System.Enum.TryParse``1(System.String,``0@);Use an overload with a ignoreCase argument
+M:System.Enum.TryParse``1(System.ReadOnlySpan{System.Char},``0@);Use an overload with a ignoreCase argument
+
+M:System.String.IsNullOrEmpty(System.String);Use System.String.IsNullOrWhiteSpace() instead
+
+F:System.StringComparison.InvariantCulture;Ordinal is much more performant
+F:System.StringComparison.InvariantCultureIgnoreCase;OrdinalIgnoreCase is much more performant
+P:System.StringComparer.InvariantCulture;Ordinal is much more performant
+P:System.StringComparer.InvariantCultureIgnoreCase;OrdinalIgnoreCase is much more performant
+
+M:System.Math.Round(System.Decimal);Use an overload with a MidpointRounding argument
+M:System.Math.Round(System.Decimal,System.Int32);Use an overload with a MidpointRounding argument
+M:System.Math.Round(System.Double);Use an overload with a MidpointRounding argument
+M:System.Math.Round(System.Double,System.Int32);Use an overload with a MidpointRounding argument
+M:System.MathF.Round(System.Single);Use an overload with a MidpointRounding argument
+M:System.MathF.Round(System.Single,System.Int32);Use an overload with a MidpointRounding argument
+
+P:System.Collections.Concurrent.ConcurrentDictionary`2.Count;Count enumerates all internal buckets to produce an accurate count while holding *all* internal locks. This will live-lock and cause CPU starvation under contention
+P:System.Collections.Concurrent.ConcurrentDictionary`2.Keys;Keys snapshots the entire collection by acquiring *all* internal locks and copying the keys to a new array. This will live-lock and cause CPU starvation under contention
+P:System.Collections.Concurrent.ConcurrentDictionary`2.Values;Values snapshots the entire collection by acquiring *all* internal locks and copying the values to a new array. This will live-lock and cause CPU starvation
+P:NonBlocking.ConcurrentDictionary`2.Keys;Keys snapshots the entire collection. On large dictionaries this will cause LOH allocations
+P:NonBlocking.ConcurrentDictionary`2.Values;Values snapshots the entire collection. On large dictionaries this will cause LOH allocations
+
+M:System.Threading.SemaphoreSlim.Wait();Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.WaitAsync();Do not suspend tasks indefinitely. Use either a timeout or a CancellationToken to ensure tasks can complete
+
+M:System.Threading.Thread.#ctor(System.Threading.ThreadStart);Do not create threads directly. Use tasks and async methods instead
+M:System.Threading.Thread.Sleep(System.Int32);Do not block threads. Use asynchronous APIs instead
+
+M:System.Threading.Tasks.Task.Wait();Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[]);Do not block threads. Use asynchronous APIs instead
+P:System.Threading.Tasks.Task`1.Result;Do not block threads. Use asynchronous APIs instead. If you need to unwrap already awaited task - Refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+
+M:System.Runtime.CompilerServices.TaskAwaiter`1.GetResult();Do not block threads. Use asynchronous APIs instead. If you need to unwrap already awaited task - Refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
 
 P:System.IO.FileSystemInfo.CreationTime;Use CreationTimeUtc instead
 P:System.IO.FileSystemInfo.LastAccessTime;Use LastAccessTimeUtc instead
@@ -24,23 +71,6 @@ M:System.IO.Directory.GetLastAccessTime(System.String);Use GetLastAccessTimeUtc 
 M:System.IO.Directory.SetCreationTime(System.String,System.DateTime);Use SetCreationTimeUtc instead
 M:System.IO.Directory.SetLastAccessTime(System.String,System.DateTime);Use SetLastAccessTimeUtc instead
 M:System.IO.Directory.SetLastWriteTime(System.String,System.DateTime);Use SetLastWriteTimeUtc instead
-
-F:System.StringComparison.InvariantCulture;Do you mean Ordinal?
-F:System.StringComparison.InvariantCultureIgnoreCase;Do you mean OrdinalIgnoreCase?
-P:System.StringComparer.InvariantCulture;Do you mean Ordinal?
-P:System.StringComparer.InvariantCultureIgnoreCase;Do you mean OrdinalIgnoreCase?
-
-M:System.Enum.TryParse(System.Type,System.String,System.Object);Use an overload with a ignoreCase argument
-M:System.Enum.TryParse(System.Type,System.ReadOnlySpan{System.Char},System.Object);Use an overload with a ignoreCase argument
-M:System.Enum.TryParse``1(System.String,``0@);Use an overload with a ignoreCase argument
-M:System.Enum.TryParse``1(System.ReadOnlySpan{System.Char},``0@);Use an overload with a ignoreCase argument
-
-M:System.Math.Round(System.Decimal);Use an overload with a MidpointRounding argument
-M:System.Math.Round(System.Decimal,System.Int32);Use an overload with a MidpointRounding argument
-M:System.Math.Round(System.Double);Use an overload with a MidpointRounding argument
-M:System.Math.Round(System.Double,System.Int32);Use an overload with a MidpointRounding argument
-M:System.MathF.Round(System.Single);Use an overload with a MidpointRounding argument
-M:System.MathF.Round(System.Single,System.Int32);Use an overload with a MidpointRounding argument
 
 M:System.Globalization.CultureInfo.#ctor(System.String);Use CultureInfo.GetCultureInfo
 

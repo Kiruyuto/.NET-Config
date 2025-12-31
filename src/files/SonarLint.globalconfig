@@ -1,0 +1,36 @@
+# global_level must be higher than the NET Analyzer files
+is_global = true
+global_level = 100
+
+# ====================================================================================================
+# Description: Contains SonarLint-specific code analysis rules
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?languages=cs&selected=csharpsquid%3AS1698
+# ====================================================================================================
+
+# General or reserved exceptions should never be thrown
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS112&rule_key=csharpsquid%3AS112
+dotnet_diagnostic.S112.severity = none
+
+# Sections of code should not be commented out
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS125&rule_key=csharpsquid%3AS125
+dotnet_diagnostic.S125.severity = none
+
+# Track uses of "TODO" tags
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS1135&rule_key=csharpsquid%3AS1135
+dotnet_diagnostic.S1135.severity = none
+
+# Exceptions should be either logged or rethrown but not both
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS2139&rule_key=csharpsquid%3AS2139
+dotnet_diagnostic.S2139.severity = none
+
+# Arrays should not be created for params parameters
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS3878&rule_key=csharpsquid%3AS3878
+dotnet_diagnostic.S3878.severity = none
+
+# Parameter names used into ArgumentException constructors should match an existing one
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS3928&rule_key=csharpsquid%3AS3928
+dotnet_diagnostic.S3928.severity = none
+
+# Logging arguments should be passed to the correct parameter
+# Help link: https://next.sonarqube.com/sonarqube/coding_rules?open=csharpsquid%3AS6668&rule_key=csharpsquid%3AS6668
+dotnet_diagnostic.S6668.severity = none

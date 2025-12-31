@@ -1,6 +1,9 @@
-# global_level must be higher than the NET Analyzer files
-is_global = true
-global_level = 0
+is_global = true # Default for .globalconfig files. Explicitly set for clarity.
+global_level = 101
+
+# ====================================================================================================
+# Description: Contains Level 4 warnings
+# ====================================================================================================
 
 # CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
 # Help link: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1591
