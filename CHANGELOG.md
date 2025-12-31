@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.0...config-2.1.1) (2025-12-31)
+
+
+### 🐛 Bug Fixes
+
+* Attempt to resoolve Rider related issue by copying files before build ([7de64de](https://github.com/Kiruyuto/.NET-Config/commit/7de64de4ffd2a6d1179e9334837a1c777dbe2bbb))
+
 ## [2.1.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.0.0...config-2.1.0) (2025-12-31)
 
 
