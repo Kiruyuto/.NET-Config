@@ -1,3 +1,0 @@
-<Project>
-  <Import Project="$(MSBuildThisFileDirectory)\..\build\Kiruyuto.DotNet.Config.targets" />
-</Project>
