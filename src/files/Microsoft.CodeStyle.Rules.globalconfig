@@ -672,5 +672,6 @@ csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental
 
 # IDE2006: Blank line not allowed after arrow expression clause token
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2006
-dotnet_diagnostic.IDE2006.severity = error
-csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = false
+# Note: Disabled because it has some weird false-positives/issues with rider + Is in experimental state
+# dotnet_diagnostic.IDE2006.severity = error
+# csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = false

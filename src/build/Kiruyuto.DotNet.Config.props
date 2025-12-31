@@ -1,4 +1,12 @@
 <Project>
+  <ItemGroup>
+    <!-- Register the editor/global config files -->
+    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.editorconfig" />
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
+    <!-- Register Banned Symbols -->
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
+  </ItemGroup>
+
   <!-- CI detection -->
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
@@ -49,20 +57,6 @@
     <IncludeSymbols Condition="'$(IncludeSymbols)' == ''">true</IncludeSymbols>
     <SymbolPackageFormat Condition="'$(SymbolPackageFormat)' == ''">snupkg</SymbolPackageFormat>
   </PropertyGroup>
-
-  <!-- ======================================================================================================================== -->
-  <!-- Attempt to fix rider-specific issue with globalconfig files -->
-  <!-- Register the editor/global config files -->
-  <ItemGroup>
-    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.editorconfig" />
-    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
-  </ItemGroup>
-
-  <!-- Register Banned Symbols -->
-  <ItemGroup>
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
-  </ItemGroup>
-  <!-- ======================================================================================================================== -->
 
   <!-- Release specific settings -->
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
