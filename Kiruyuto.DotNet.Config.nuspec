@@ -10,7 +10,7 @@
     <readme>docs\README.md</readme>
     <version>$version$</version>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <license type="expression">MIT</license>
+    <license type="file">LICENSE.txt</license>
     <projectUrl>https://github.com/Kiruyuto/.NET-Config</projectUrl>
     <repository type="git" url="https://github.com/Kiruyuto/.NET-Config.git" branch="master" />
 
@@ -23,7 +23,8 @@
   </metadata>
 
   <files>
-    <file src="README.md" target="docs\" />
     <file src="src\**" target="" />
+    <file src="LICENSE.txt" target="" />
+    <file src="README.md" target="docs\" />
   </files>
 </package>

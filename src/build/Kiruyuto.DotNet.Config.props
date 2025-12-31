@@ -8,11 +8,11 @@
   <PropertyGroup>
     <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#warninglevel -->
     <WarningLevel>4</WarningLevel>
-    
+
     <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#enable-additional-rules -->
     <AnalysisMode>All</AnalysisMode>
     <AnalysisLevel>latest</AnalysisLevel>
-    
+
     <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
     <ReportAnalyzer>true</ReportAnalyzer>
 
@@ -33,6 +33,7 @@
   <PropertyGroup>
     <Deterministic>true</Deterministic>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DebugType Condition="'$(DebugType)' == ''">embedded</DebugType>
     <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
     <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#treat-warnings-as-errors -->
     <TreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</TreatWarningsAsErrors>
