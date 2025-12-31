@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.1...config-2.1.2) (2025-12-31)
+
+
+### 🐛 Bug Fixes
+
+* Use correct operation syntax ([25ed014](https://github.com/Kiruyuto/.NET-Config/commit/25ed0146370dd2efd7f62821e0b034ed689400d2))
+
 ## [2.1.1](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.0...config-2.1.1) (2025-12-31)
 
 
