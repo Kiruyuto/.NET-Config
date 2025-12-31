@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.4](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.3...config-2.1.4) (2025-12-31)
+
+
+### 🐛 Bug Fixes
+
+* Update configuration files to resolve Rider-related issues and clean up obsolete entries ([89b98e5](https://github.com/Kiruyuto/.NET-Config/commit/89b98e52437e4b62350038451167c9d1ebf8da17))
+
 ## [2.1.3](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.2...config-2.1.3) (2025-12-31)
 
 
