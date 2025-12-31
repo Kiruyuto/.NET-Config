@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.0.0...config-2.1.0) (2025-12-31)
+
+
+### 🚀 Features & Enhancements
+
+* Update license handling and improve globalconfig clarity ([1bd7f57](https://github.com/Kiruyuto/.NET-Config/commit/1bd7f571d45537e51b27e04593aaa4da65a39427))
+
+
+### 🐛 Bug Fixes
+
+* Correct README.md file target path in nuspec ([a075399](https://github.com/Kiruyuto/.NET-Config/commit/a075399aa4481e9ab3082eb71d46e142d1f03991))
+* Update README.md path in nuspec to correct location ([f14cbc9](https://github.com/Kiruyuto/.NET-Config/commit/f14cbc9ed91d656f47195772885e4925fc290841))
+
 ## [2.0.0](https://github.com/Kiruyuto/.NET-Config/compare/config-1.3.18...config-2.0.0) (2025-12-31)
 
 
