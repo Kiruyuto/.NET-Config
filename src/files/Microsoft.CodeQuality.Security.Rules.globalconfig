@@ -92,7 +92,8 @@ dotnet_diagnostic.CA1031.severity = none
 
 # CA1032: Implement standard exception constructors
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1032
-dotnet_diagnostic.CA1032.severity = warning
+# Note: Business domain exceptions often do not need all standard constructors. This rule should be targeted for libraries and such.
+dotnet_diagnostic.CA1032.severity = none
 
 # CA1033: Interface methods should be callable by child types
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1033
