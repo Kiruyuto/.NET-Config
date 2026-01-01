@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.6](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.5...config-2.1.6) (2026-01-01)
+
+
+### Refactors
+
+* Split props into modular configuration files; Improve docs ([#70](https://github.com/Kiruyuto/.NET-Config/issues/70)) ([869dba2](https://github.com/Kiruyuto/.NET-Config/commit/869dba26b00f0f5be5c74b2507662d6960ae09fb))
+
 ## [2.1.5](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.4...config-2.1.5) (2026-01-01)
 
 
