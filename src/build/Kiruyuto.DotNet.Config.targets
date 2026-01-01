@@ -1,5 +1,0 @@
-<Project>
-  <Target Name="_SourceLinkFound" Condition="'$(MicrosoftBuildTasksGitAssemblyFile)' == ''" BeforeTargets="ResolveAssemblyReferences;Build;Rebuild">
-    <Warning Text="SourceLink is not enabled. Use .NET 8 or later." />
-  </Target>
-</Project>

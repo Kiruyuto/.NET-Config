@@ -9,12 +9,12 @@
 
     <!-- https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#publishdocumentationfile -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-    <ItemGroup Condition="'$(Language)' == 'C#' AND ('$(ImplicitUsings)' == 'true' or '$(ImplicitUsings)' == 'enable')">
-      <Using Include="System.Diagnostics.CodeAnalysis" />
-      <Using Include="System.Text" />
-    </ItemGroup>
   </PropertyGroup>
+
+  <ItemGroup Condition="'$(Language)' == 'C#' AND ('$(ImplicitUsings)' == 'true' OR '$(ImplicitUsings)' == 'enable')">
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+    <Using Include="System.Text" />
+  </ItemGroup>
 
   <PropertyGroup Label="Shared settings evaluated only in 'Release' build configuration" Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>
