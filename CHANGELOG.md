@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.1.5](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.4...config-2.1.5) (2026-01-01)
+
+
+### Chores
+
+* Add VSCode settings for globalconfig file association ([b51e7cc](https://github.com/Kiruyuto/.NET-Config/commit/b51e7cc6e02c1d4317c3bbdbb9930ac6ea0df716))
+* Adjust CA1032 severity to 'none' ([38037cc](https://github.com/Kiruyuto/.NET-Config/commit/38037cc952ff5517dbfc8bc3998f1118de669167))
+* Adjust CA1708 severity to 'none' ([dbffeae](https://github.com/Kiruyuto/.NET-Config/commit/dbffeae6b56ec2fe675dc56c7646d0860c8f27a0))
+* Adjust CA1812 severity to 'none' ([9f888c9](https://github.com/Kiruyuto/.NET-Config/commit/9f888c91dfb57976e334f5fb2bb599fac7348ad9))
+* Adjust IDE0058 severity to 'none'' ([c068dff](https://github.com/Kiruyuto/.NET-Config/commit/c068dff495d0164b4f7c205174385d42905e569a))
+* Change severity levels from error to warning for various IDE rules ([1e18221](https://github.com/Kiruyuto/.NET-Config/commit/1e18221d7b80fe5a1114d803fd10e18243113648))
+* Improve commit message instructions ([42c26fd](https://github.com/Kiruyuto/.NET-Config/commit/42c26fded9334d61527d748f621d7a3bc75f0369))
+
+
+### Documentation improvements
+
+* Add note on disabling S125 rule ([e40f410](https://github.com/Kiruyuto/.NET-Config/commit/e40f41017cb84f7c2b324b38c08537bc4c7a0039))
+* Improve notes for CA1028 and IDE0058 severity changes ([d87a331](https://github.com/Kiruyuto/.NET-Config/commit/d87a331e322f47bfe364358472e1c06e971a0592))
+
 ## [2.1.4](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.3...config-2.1.4) (2025-12-31)
 
 
