@@ -1,65 +1,23 @@
 <Project>
-  <ItemGroup>
-    <!-- Register the editor/global config files -->
-    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.editorconfig" />
-    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
-    <!-- Register Banned Symbols -->
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
+  <PropertyGroup Label="Shared settings applicable to all build configurations">
+    <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
+    <AllowUnsafeBlocks Condition="'$(AllowUnsafeBlocks)' == ''">true</AllowUnsafeBlocks>
+    <ImplicitUsings Condition="'$(ImplicitUsings)' == ''">enable</ImplicitUsings>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/code-generation#deterministic -->
+    <Deterministic>true</Deterministic>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#publishdocumentationfile -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Language)' == 'C#' AND ('$(ImplicitUsings)' == 'true' OR '$(ImplicitUsings)' == 'enable')">
+    <Using Include="System.Diagnostics.CodeAnalysis" />
+    <Using Include="System.Text" />
   </ItemGroup>
 
-  <!-- CI detection -->
-  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
-
-  <!-- Analyzer related settings -->
-  <PropertyGroup>
-    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#warninglevel -->
-    <WarningLevel>4</WarningLevel>
-
-    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#enable-additional-rules -->
-    <AnalysisMode>All</AnalysisMode>
-    <AnalysisLevel>latest</AnalysisLevel>
-
-    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
-    <ReportAnalyzer>true</ReportAnalyzer>
-
-    <!-- https://github.com/dotnet/runtime/issues/27005#issuecomment-408646070 -->
-    <Features>strict</Features>
-
-    <!-- https://learn.microsoft.com/en-us/visualstudio/code-quality/install-net-analyzers -->
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-
-    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#enable-on-build -->
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-
-    <!-- https://github.com/dotnet/roslyn/issues/78695#issuecomment-3238256201 -->
-    <EnableBannedApiAnalyzers>true</EnableBannedApiAnalyzers>
-  </PropertyGroup>
-
-  <!-- Various project metadata -->
-  <PropertyGroup>
-    <Deterministic>true</Deterministic>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <DebugType Condition="'$(DebugType)' == ''">embedded</DebugType>
-    <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
-    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#treat-warnings-as-errors -->
-    <TreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</TreatWarningsAsErrors>
-    <CodeAnalysisTreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</CodeAnalysisTreatWarningsAsErrors>
-  </PropertyGroup>
-
-  <!-- NuGet authoring; Only set values if not already set -->
-  <PropertyGroup>
-    <Authors Condition="'$(Authors)' == ''">Kiruyuto</Authors>
-    <RepositoryType Condition="'$(RepositoryType)' == ''">git</RepositoryType>
-    <PublishRepositoryUrl Condition="'$(PublishRepositoryUrl)' == ''">true</PublishRepositoryUrl>
-    <EmbedUntrackedSources Condition="'$(EmbedUntrackedSources)' == ''">true</EmbedUntrackedSources>
-    <IncludeSymbols Condition="'$(IncludeSymbols)' == ''">true</IncludeSymbols>
-    <SymbolPackageFormat Condition="'$(SymbolPackageFormat)' == ''">snupkg</SymbolPackageFormat>
-  </PropertyGroup>
-
-  <!-- Release specific settings -->
-  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+  <PropertyGroup Label="Shared settings evaluated only in 'Release' build configuration" Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>
+    <DebugType Condition="'$(DebugType)' == ''">embedded</DebugType>
   </PropertyGroup>
 </Project>

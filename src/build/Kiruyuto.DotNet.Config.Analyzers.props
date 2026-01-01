@@ -1,0 +1,34 @@
+<Project>
+  <ItemGroup Label="Register analyzer configuration files and additional files">
+    <!-- Register the editor/global config files -->
+    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.editorconfig" />
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
+
+    <!-- Register Banned Symbols -->
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
+  </ItemGroup>
+
+  <PropertyGroup Label="Analyzer related settings">
+    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#warninglevel -->
+    <WarningLevel>4</WarningLevel>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#enable-additional-rules -->
+    <AnalysisMode>All</AnalysisMode>
+    <AnalysisLevel>latest-all</AnalysisLevel>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
+    <ReportAnalyzer>true</ReportAnalyzer>
+
+    <!-- https://github.com/dotnet/runtime/issues/27005#issuecomment-408646070 -->
+    <Features>strict</Features>
+
+    <!-- https://learn.microsoft.com/en-us/visualstudio/code-quality/install-net-analyzers -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+
+    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#enable-on-build -->
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <!-- https://github.com/dotnet/roslyn/issues/78695#issuecomment-3238256201 -->
+    <EnableBannedApiAnalyzers>true</EnableBannedApiAnalyzers>
+  </PropertyGroup>
+</Project>
