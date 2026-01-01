@@ -126,7 +126,7 @@ dotnet_style_null_propagation = true
 
 # IDE0032: Use auto-implemented property
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0032
-dotnet_diagnostic.IDE0032.severity = error
+dotnet_diagnostic.IDE0032.severity = warning
 dotnet_style_prefer_auto_properties = true
 
 # IDE0033: Use explicitly provided tuple name
@@ -145,7 +145,7 @@ dotnet_diagnostic.IDE0035.severity = warning
 
 # IDE0036: Order modifiers
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0036
-dotnet_diagnostic.IDE0036.severity = error
+dotnet_diagnostic.IDE0036.severity = warning
 csharp_preferred_modifier_order = public,private,protected,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,required,volatile,async
 
 # IDE0037: Use inferred member name
@@ -161,7 +161,7 @@ csharp_style_prefer_local_over_anonymous_function = true
 
 # IDE0040: Add accessibility modifiers
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0040
-dotnet_diagnostic.IDE0040.severity = error
+dotnet_diagnostic.IDE0040.severity = warning
 dotnet_style_require_accessibility_modifiers = for_non_interface_members
 
 # IDE0041: Use 'is null' check
@@ -176,7 +176,7 @@ csharp_style_deconstructed_variable_declaration = true
 
 # IDE0044: Add readonly modifier
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0044
-dotnet_diagnostic.IDE0044.severity = error
+dotnet_diagnostic.IDE0044.severity = warning
 dotnet_style_readonly_field = true
 
 # IDE0045: Use conditional expression for assignment
@@ -328,11 +328,11 @@ csharp_style_prefer_simple_using_statement = true
 
 # IDE0064: Make struct fields writable
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0064
-dotnet_diagnostic.IDE0064.severity = error
+dotnet_diagnostic.IDE0064.severity = warning
 
 # IDE0065: 'using' directive placement
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0065
-dotnet_diagnostic.IDE0065.severity = error
+dotnet_diagnostic.IDE0065.severity = warning
 csharp_using_directive_placement = outside_namespace
 
 # IDE0066: Use switch expression
@@ -346,7 +346,7 @@ dotnet_diagnostic.IDE0070.severity = warning
 
 # IDE0071: Simplify interpolation
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0071
-dotnet_diagnostic.IDE0071.severity = error
+dotnet_diagnostic.IDE0071.severity = warning
 dotnet_style_prefer_simplified_interpolation = true
 
 # IDE0072: Populate switch
@@ -372,12 +372,12 @@ csharp_style_pattern_matching_over_as_with_null_check = true
 
 # IDE0079: Remove unnecessary suppression
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0079
-dotnet_diagnostic.IDE0079.severity = error
+dotnet_diagnostic.IDE0079.severity = warning
 dotnet_remove_unnecessary_suppression_exclusions = none
 
 # IDE0080: Remove unnecessary suppression operator
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0080
-dotnet_diagnostic.IDE0080.severity = error
+dotnet_diagnostic.IDE0080.severity = warning
 
 # IDE0082: Convert 'typeof' to 'nameof'
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0082
@@ -421,8 +421,8 @@ csharp_style_prefer_null_check_over_type_check = true
 
 # IDE0160 & IDE0161: Namespace declaration preferences
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0160-ide0161
-dotnet_diagnostic.IDE0160.severity = error
-dotnet_diagnostic.IDE0161.severity = error
+dotnet_diagnostic.IDE0160.severity = warning
+dotnet_diagnostic.IDE0161.severity = warning
 csharp_style_namespace_declarations = file_scoped
 
 # IDE0170: Simplify property pattern
@@ -460,20 +460,20 @@ csharp_style_prefer_utf8_string_literals = true
 
 # IDE0240: Nullable directive is redundant
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0240
-dotnet_diagnostic.IDE0240.severity = error
+dotnet_diagnostic.IDE0240.severity = warning
 
 # IDE0241: Nullable directive is unnecessary
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0241
-dotnet_diagnostic.IDE0241.severity = error
+dotnet_diagnostic.IDE0241.severity = warning
 
 # IDE0250: Struct can be made 'readonly'
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0250
-dotnet_diagnostic.IDE0250.severity = error
+dotnet_diagnostic.IDE0250.severity = warning
 csharp_style_prefer_readonly_struct = true
 
 # IDE0251: Member can be made 'readonly'
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0251
-dotnet_diagnostic.IDE0251.severity = error
+dotnet_diagnostic.IDE0251.severity = warning
 csharp_style_prefer_readonly_struct_member = true
 
 # IDE0280: Use 'nameof'
@@ -522,7 +522,7 @@ dotnet_diagnostic.IDE0306.severity = warning
 
 # IDE0320: Make anonymous function static
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0320
-dotnet_diagnostic.IDE0320.severity = error
+dotnet_diagnostic.IDE0320.severity = warning
 csharp_prefer_static_anonymous_function = true
 
 # IDE0330: Prefer 'System.Threading.Lock'
@@ -547,11 +547,11 @@ csharp_style_prefer_simple_property_accessors = true
 
 # IDE0370: Remove unnecessary suppression
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0370
-dotnet_diagnostic.IDE0370.severity = error
+dotnet_diagnostic.IDE0370.severity = warning
 
 # IDE0380: Remove unnecessary unsafe modifier
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0380
-dotnet_diagnostic.IDE0380.severity = error
+dotnet_diagnostic.IDE0380.severity = warning
 
 # IDE1005: Use conditional delegate call
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide1005
@@ -647,7 +647,7 @@ dotnet_naming_symbols.all_members.applicable_kinds = *
 
 # IDE2000: Avoid multiple blank lines
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2000
-dotnet_diagnostic.IDE2000.severity = error
+dotnet_diagnostic.IDE2000.severity = warning
 dotnet_style_allow_multiple_blank_lines_experimental = false
 
 # IDE2001: Embedded statements must be on their own line
@@ -657,21 +657,21 @@ csharp_style_embedded_statements_on_new_line = true
 
 # IDE2002: Consecutive braces must not have blank line between them
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2002
-dotnet_diagnostic.IDE2002.severity = error
+dotnet_diagnostic.IDE2002.severity = warning
 csharp_style_allow_blank_lines_between_consecutive_braces_experimental = false
 
 # IDE2003: Blank line required between block and subsequent statement
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2003
-dotnet_diagnostic.IDE2003.severity = error
+dotnet_diagnostic.IDE2003.severity = warning
 dotnet_style_allow_statement_immediately_after_block_experimental = false
 
 # IDE2005: Blank line not allowed after conditional expression token
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2005
-dotnet_diagnostic.IDE2005.severity = error
+dotnet_diagnostic.IDE2005.severity = warning
 csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental = false
 
 # IDE2006: Blank line not allowed after arrow expression clause token
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2006
 # Note: Disabled because it has some weird false-positives/issues with rider + Is in experimental state
-# dotnet_diagnostic.IDE2006.severity = error
+# dotnet_diagnostic.IDE2006.severity = warning
 # csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = false
