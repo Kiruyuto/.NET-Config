@@ -14,9 +14,9 @@ Add the [nuget](https://www.nuget.org/packages/Kiruyuto.DotNet.Config/#versions-
 > It is recommended to use `Directory.Build.props` in your project over per `.csproj` configuration
 
 ### Structure overview
-- Dependencies can found in [.nuspec file](./Kiruyuto.DotNet.Config.nuspec)
+- Dependencies can be found in [.nuspec file](./Kiruyuto.DotNet.Config.nuspec)
 - Configs are located in [`src/files/` directory](./src/files/)
-- `.props` files with their configs are located in [`src/build/` directory](./src/build/). These are split into categories for improved maintainability. 
+- `.props` files with their configs are located in [`src/build/` directory](./src/build/). These are split into categories for improved maintainability 
 
 ### Contributing
 Useful links are located in [CONTRIBUTING.md](CONTRIBUTING.md) as well as some of the most important `TL;DRs`

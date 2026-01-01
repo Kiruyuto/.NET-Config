@@ -6,20 +6,20 @@
 
     <RequireLicenseAcceptance Condition="'$(RequireLicenseAcceptance)' == ''">false</RequireLicenseAcceptance>
 
-    <RepositoryType>git</RepositoryType>
+    <RepositoryType Condition="'$(RepositoryType)' == ''">git</RepositoryType>
 
     <!-- https://github.com/dotnet/sourcelink/issues/659#issuecomment-711288537 -->
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PublishRepositoryUrl Condition="'$(PublishRepositoryUrl)' == ''">true</PublishRepositoryUrl>
 
     <!-- Embeds files that are not tracked by source control into the PDBs. Helps with source generated files. -->
     <!-- Set by default for .NET8+ -->
     <EmbedUntrackedSources Condition="'$(EmbedUntrackedSources)' == ''">true</EmbedUntrackedSources>
 
     <!-- https://learn.microsoft.com/en-us/nuget/create-packages/symbol-packages-snupkg#creating-a-symbol-package -->
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IncludeSymbols Condition="'$(IncludeSymbols)' == ''">true</IncludeSymbols>
+    <SymbolPackageFormat Condition="'$(SymbolPackageFormat)' == ''">snupkg</SymbolPackageFormat>
 
     <!-- Include PDBs in the NuGet package -->
-    <DebugType>embedded</DebugType>
+    <DebugType Condition="'$(DebugType)' == ''">embedded</DebugType>
   </PropertyGroup>
 </Project>
