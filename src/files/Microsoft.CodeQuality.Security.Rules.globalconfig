@@ -382,7 +382,8 @@ dotnet_diagnostic.CA1707.severity = warning
 
 # CA1708: Identifiers should differ by more than case
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1708
-dotnet_diagnostic.CA1708.severity = warning
+# Note: Too much noise with modern syntax (extension blocks) and architecture (e.g.: CA)
+dotnet_diagnostic.CA1708.severity = none
 
 # CA1710: Identifiers should have correct suffix
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1710
