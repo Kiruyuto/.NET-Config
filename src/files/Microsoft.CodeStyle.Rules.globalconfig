@@ -298,6 +298,7 @@ csharp_style_prefer_range_operator = true
 
 # IDE0058: Remove unnecessary expression value
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0058
+# Note: Causes discarding values in statement lambdas, e.g.: "dbContext => { _ = dbContextBuilder.UseSqlServer(...) }"
 dotnet_diagnostic.IDE0058.severity = none
 csharp_style_unused_value_expression_statement_preference = discard_variable
 
