@@ -33,5 +33,5 @@ jobs:
       - name: "Ensure scripts work"
         shell: pwsh
         run: |
-          ./PackAndRegister.ps1
-          ./RemovePackageAndUnregisterFeed.ps1
+          ./scripts/PackAndRegister.ps1
+          ./scripts/RemovePackageAndUnregisterFeed.ps1
