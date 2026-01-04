@@ -1,6 +1,6 @@
-is_global = true
-global_level = 110
+root = false
 
+[*.{cs,vb}]
 # ====================================================================================================
 # Description: Contains SonarAnalyzer-specific code analysis rules
 # Help link: https://next.sonarqube.com/sonarqube/coding_rules?languages=cs&selected=csharpsquid%3AS1698
