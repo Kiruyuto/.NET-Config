@@ -1,5 +1,5 @@
 is_global = true # Default for .globalconfig files. Explicitly set for clarity.
-global_level = 101 # Default .globalconfig level. Explicitly set for clarity.
+global_level = 100
 
 # ====================================================================================================
 # Description: Contains Level 4 warnings

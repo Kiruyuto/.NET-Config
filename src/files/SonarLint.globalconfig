@@ -1,6 +1,5 @@
-# global_level must be higher than the NET Analyzer files
 is_global = true
-global_level = 100 # Default .globalconfig level. Explicitly set for clarity.
+global_level = 101 # global_level must be higher than the NET Analyzer files
 
 # ====================================================================================================
 # Description: Contains SonarLint-specific code analysis rules
