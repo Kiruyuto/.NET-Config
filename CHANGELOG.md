@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.2.1](https://github.com/Kiruyuto/.NET-Config/compare/config-2.2.0...config-2.2.1) (2026-01-04)
+
+
+### Chores
+
+* Adjust naming rules to better respect MS guidelines ([5fd3779](https://github.com/Kiruyuto/.NET-Config/commit/5fd377917cda9151edc20dd0a4e7fa0d8b8b017f))
+
+
+### Documentation improvements
+
+* Add SonarAnalyzer-specific code analysis rules ([2e28c86](https://github.com/Kiruyuto/.NET-Config/commit/2e28c8696a7c4b5e53d6eba41d757b4a82bed54d))
+
 ## [2.2.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.7...config-2.2.0) (2026-01-04)
 
 
