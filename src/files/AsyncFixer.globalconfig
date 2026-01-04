@@ -1,0 +1,31 @@
+is_global = true
+global_level = 110
+
+# ====================================================================================================
+# Description: Contains AsyncFixer-specific code analysis rules
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md
+# ====================================================================================================
+
+# AsyncFixer01: Unnecessary async/await usage
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer01
+dotnet_diagnostic.AsyncFixer01.severity = error
+
+# AsyncFixer02: Blocking calls inside async methods
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer02
+dotnet_diagnostic.AsyncFixer02.severity = error
+
+# AsyncFixer03: Async void methods and delegates
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer03
+dotnet_diagnostic.AsyncFixer03.severity = error
+
+# AsyncFixer04:	Unawaited async call in using block
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer04
+dotnet_diagnostic.AsyncFixer04.severity = error
+
+# AsyncFixer05: Nested Task from TaskFactory.StartNew
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer05
+dotnet_diagnostic.AsyncFixer05.severity = warning
+
+# AsyncFixer06: Task<T> to Task implicit conversion
+# Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer06
+dotnet_diagnostic.AsyncFixer06.severity = warning
