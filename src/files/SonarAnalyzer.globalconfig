@@ -2,7 +2,7 @@ is_global = true
 global_level = 110
 
 # ====================================================================================================
-# Description: Contains SonarLint-specific code analysis rules
+# Description: Contains SonarAnalyzer-specific code analysis rules
 # Help link: https://next.sonarqube.com/sonarqube/coding_rules?languages=cs&selected=csharpsquid%3AS1698
 # ====================================================================================================
 
