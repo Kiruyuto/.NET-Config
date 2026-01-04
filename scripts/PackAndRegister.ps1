@@ -2,7 +2,7 @@ $nugetExeLink = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
 $nugetExePath = ".\nuget.exe"
 $packageVersion = "0.0.1"
 $feedName = "KiruyutoDotNetConfigLocalFeed"
-$feedPath = "$PSScriptRoot"
+$feedPath = Split-Path $PSScriptRoot -Parent
 
 # Check if nuget.exe exists, if not download it
 if (-not (Test-Path $nugetExePath)) {

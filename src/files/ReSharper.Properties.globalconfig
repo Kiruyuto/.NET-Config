@@ -1,5 +1,5 @@
-is_global = true # Default for .globalconfig files. Explicitly set for clarity.
-global_level = 100 # Default .globalconfig level. Explicitly set for clarity.
+is_global = true
+global_level = 100
 
 # ====================================================================================================
 # Description: Contains ReSharper-specific code analysis rules

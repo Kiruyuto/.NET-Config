@@ -14,7 +14,8 @@ if ($existingSource) {
 
 # Remove packed package files
 Write-Host "Removing packed package files..."
-$packages = Get-ChildItem -Path $PSScriptRoot -Filter $packagePattern
+$projectRoot = Split-Path $PSScriptRoot -Parent
+$packages = Get-ChildItem -Path $projectRoot -Filter $packagePattern
 if ($packages) {
     foreach ($package in $packages) {
         Remove-Item $package.FullName -Force

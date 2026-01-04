@@ -1,4 +1,4 @@
-is_global = true # Default for .globalconfig files. Explicitly set for clarity.
+is_global = true
 global_level = 100
 
 # ====================================================================================================
