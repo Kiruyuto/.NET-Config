@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.7](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.6...config-2.1.7) (2026-01-04)
+
+
+### Chores
+
+* Explicitly disable CS1591 rule in `.props` file ([537c594](https://github.com/Kiruyuto/.NET-Config/commit/537c594e887c8607baf9e9c5b9a957eff97b97f3))
+
+
+### Documentation improvements
+
+* Improve 'structure overview' header wording ([9729441](https://github.com/Kiruyuto/.NET-Config/commit/972944117fb32a03f3cdced4ef1ee5466c0ce94b))
+* Update note for global_level in configuration files ([4b9c05d](https://github.com/Kiruyuto/.NET-Config/commit/4b9c05d0005fd2786acf404cf6b581dba8d57ee5))
+
 ## [2.1.6](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.5...config-2.1.6) (2026-01-01)
 
 
