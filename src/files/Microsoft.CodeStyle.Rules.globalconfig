@@ -565,86 +565,126 @@ csharp_style_conditional_delegate_call = true
 # Note: All naming options have rule ID IDE1006 and title Naming rule violation
 # Note: General syntax must follow "<kind>.<entityName>.<propertyName> = <propertyValue>" structure
 dotnet_diagnostic.IDE1006.severity = warning
+
+# Interface names must start with capital 'I'
+# Example: interface IMyInterface { }
+dotnet_naming_rule.interfaces_should_start_with_i.severity = warning
+dotnet_naming_rule.interfaces_should_start_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_start_with_i.style = begins_with_i_style
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+dotnet_naming_style.begins_with_i_style.required_prefix = I
+dotnet_naming_style.begins_with_i_style.capitalization = pascal_case
+
+# Attribute types must end with 'Attribute'
+# Example: class MyCustomAttribute : Attribute { }
+dotnet_naming_rule.attributes_should_end_with_attribute.severity = warning
+dotnet_naming_rule.attributes_should_end_with_attribute.symbols = attributes
+dotnet_naming_rule.attributes_should_end_with_attribute.style = ends_with_attribute_style
+dotnet_naming_symbols.attributes.applicable_kinds = class
+dotnet_naming_symbols.attributes.applicable_accessibilities = *
+dotnet_naming_symbols.attributes.required_base_types = System.Attribute
+dotnet_naming_style.ends_with_attribute_style.required_suffix = Attribute
+dotnet_naming_style.ends_with_attribute_style.capitalization = pascal_case
+
+# Class names should be 'PascalCase'
+# Example: class MyClass { }
+dotnet_naming_rule.classes_should_be_pascal_case.severity = warning
+dotnet_naming_rule.classes_should_be_pascal_case.symbols = classes
+dotnet_naming_rule.classes_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.classes.applicable_kinds = class
+dotnet_naming_symbols.classes.applicable_accessibilities = *
 dotnet_naming_style.pascal_case.capitalization = pascal_case
-# 'interfaces' should begin with 'I'
-# Example: IMyInterface
-dotnet_naming_style.interface_style.capitalization = pascal_case
-dotnet_naming_style.interface_style.required_prefix = I
-dotnet_naming_rule.interface_should_be_begins_with_i.severity = warning
-dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface_symbols
-dotnet_naming_rule.interface_should_be_begins_with_i.style = interface_style
-dotnet_naming_symbols.interface_symbols.applicable_kinds = interface
-dotnet_naming_symbols.interface_symbols.applicable_accessibilities = *
-# 'const fields' should be 'PascalCase'
-# Example: public const int MyConstant = 1;
-dotnet_naming_rule.constant_fields_should_be_pascal_case.severity = warning
-dotnet_naming_rule.constant_fields_should_be_pascal_case.symbols = constant_fields
-dotnet_naming_rule.constant_fields_should_be_pascal_case.style = pascal_case
-dotnet_naming_symbols.constant_fields.applicable_kinds = field
-dotnet_naming_symbols.constant_fields.required_modifiers = const
-# 'static readonly fields' should be 'PascalCase' (Similar to constants)
+
+# Method names should be 'PascalCase'
+# Example: void MyMethod() { }
+dotnet_naming_rule.methods_should_be_pascal_case.severity = warning
+dotnet_naming_rule.methods_should_be_pascal_case.symbols = methods
+dotnet_naming_rule.methods_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.methods.applicable_kinds = method
+dotnet_naming_symbols.methods.applicable_accessibilities = *
+
+# 'Parameters' and 'locals' should be 'camelCase'
+# Example: void MyMethod(int myParameter) { var myLocal = myParameter; }
+dotnet_naming_rule.parameters_and_locals_should_be_camel_case.severity = warning
+dotnet_naming_rule.parameters_and_locals_should_be_camel_case.symbols = parameters_and_locals
+dotnet_naming_rule.parameters_and_locals_should_be_camel_case.style = camel_case_style
+dotnet_naming_symbols.parameters_and_locals.applicable_kinds = parameter, local
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+
+# All 'const fields' should be 'PascalCase'
+# Example: public const int MyConstantField = 1;
+dotnet_naming_rule.const_fields_should_be_pascal_case.severity = warning
+dotnet_naming_rule.const_fields_should_be_pascal_case.symbols = const_fields
+dotnet_naming_rule.const_fields_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.const_fields.applicable_kinds = field
+dotnet_naming_symbols.const_fields.required_modifiers = const
+
+# All 'const locals' should be 'PascalCase'
+# Example: const int MyConstantLocal = 1;
+dotnet_naming_rule.const_locals_should_be_pascal_case.severity = warning
+dotnet_naming_rule.const_locals_should_be_pascal_case.symbols = const_locals
+dotnet_naming_rule.const_locals_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.const_locals.applicable_kinds = local
+dotnet_naming_symbols.const_locals.required_modifiers = const
+
+# 'Static readonly fields' should be 'PascalCase' (Similar to constants)
 # Example: public static readonly int MyStaticReadonlyField = 1;
 dotnet_naming_rule.static_readonly_fields_should_be_pascal_case.severity = warning
 dotnet_naming_rule.static_readonly_fields_should_be_pascal_case.symbols = static_readonly_fields
 dotnet_naming_rule.static_readonly_fields_should_be_pascal_case.style = pascal_case
 dotnet_naming_symbols.static_readonly_fields.applicable_kinds = field
-dotnet_naming_symbols.static_readonly_fields.required_modifiers = static,readonly
-# 'static fields' should have 's_' prefix
-# Example: private static int s_myStaticField;
-dotnet_naming_style.static_prefix_style.capitalization = camel_case
-dotnet_naming_style.static_prefix_style.required_prefix = s_
-dotnet_naming_rule.static_fields_should_have_prefix.severity = warning
-dotnet_naming_rule.static_fields_should_have_prefix.symbols = static_fields
-dotnet_naming_rule.static_fields_should_have_prefix.style = static_prefix_style
-dotnet_naming_symbols.static_fields.applicable_kinds = field
-dotnet_naming_symbols.static_fields.required_modifiers = static
-dotnet_naming_symbols.static_fields.applicable_accessibilities = private, internal, private_protected
-# 'internal' and 'private' fields should be '_camelCase'
-# Example: private int _myField;
-dotnet_naming_style.camel_case_underscore_style.capitalization = camel_case
-dotnet_naming_style.camel_case_underscore_style.required_prefix = _
-dotnet_naming_rule.camel_case_for_private_internal_fields.severity = warning
-dotnet_naming_rule.camel_case_for_private_internal_fields.symbols = private_internal_fields
-dotnet_naming_rule.camel_case_for_private_internal_fields.style = camel_case_underscore_style
-dotnet_naming_symbols.private_internal_fields.applicable_kinds = field
-dotnet_naming_symbols.private_internal_fields.applicable_accessibilities = private, internal
-# All 'const variables' should be 'PascalCase'
-# Example: const int MyConstantVariable = 1;
-dotnet_naming_style.pascal_case.capitalization = pascal_case
-dotnet_naming_rule.constant_variables_should_be_pascal_case.severity = warning
-dotnet_naming_rule.constant_variables_should_be_pascal_case.symbols  = constant_variables
-dotnet_naming_rule.constant_variables_should_be_pascal_case.style    = pascal_case
-dotnet_naming_symbols.constant_variables.applicable_kinds   = local
-dotnet_naming_symbols.constant_variables.required_modifiers = const
-# 'Locals' and 'parameters' should be 'camelCase'
-# Example: void MyMethod(int myParameter) { var myLocal = myParameter; }
-dotnet_naming_style.camel_case_style.capitalization = camel_case
-dotnet_naming_rule.locals_should_be_camel_case.severity = warning
-dotnet_naming_rule.locals_should_be_camel_case.symbols = locals_and_parameters
-dotnet_naming_rule.locals_should_be_camel_case.style = camel_case_style
-dotnet_naming_symbols.locals_and_parameters.applicable_kinds = parameter, local
+dotnet_naming_symbols.static_readonly_fields.required_modifiers = static, readonly
+
 # 'Local functions' should be 'PascalCase'
-# Example: void MyLocalFunction() { }
-dotnet_naming_style.local_function_style.capitalization = pascal_case
+# Example: public void Function() { void MyLocalFunction() { } MyLocalFunction(); }
 dotnet_naming_rule.local_functions_should_be_pascal_case.severity = warning
 dotnet_naming_rule.local_functions_should_be_pascal_case.symbols = local_functions
 dotnet_naming_rule.local_functions_should_be_pascal_case.style = pascal_case
 dotnet_naming_symbols.local_functions.applicable_kinds = local_function
-# 'Generic type parameters' should be 'PascalCase' and begin with 'T'
-# Example: void MyMethod<TItem>(TItem item) { }
-dotnet_naming_style.type_parameter_style.capitalization = pascal_case
-dotnet_naming_style.type_parameter_style.required_prefix = T
-dotnet_naming_rule.type_parameter_naming.severity = warning
-dotnet_naming_rule.type_parameter_naming.symbols = type_parameter_symbol
-dotnet_naming_rule.type_parameter_naming.style = type_parameter_style
-dotnet_naming_symbols.type_parameter_symbol.applicable_kinds = type_parameter
-dotnet_naming_symbols.type_parameter_symbol.applicable_accessibilities = *
-# By default, name items with 'PascalCase'
-# Example: public int MyProperty { get; set; }
-dotnet_naming_rule.members_should_be_pascal_case.severity = warning
-dotnet_naming_rule.members_should_be_pascal_case.symbols = all_members
-dotnet_naming_rule.members_should_be_pascal_case.style = pascal_case
-dotnet_naming_symbols.all_members.applicable_kinds = *
+
+# Private instance fields start with '_' and are 'camelCase'
+# Example: private int _myField;
+dotnet_naming_rule.private_instance_fields_should_start_with_underscore.severity = warning
+dotnet_naming_rule.private_instance_fields_should_start_with_underscore.symbols = private_instance_fields
+dotnet_naming_rule.private_instance_fields_should_start_with_underscore.style = underscore_camel_case
+dotnet_naming_symbols.private_instance_fields.applicable_kinds = field
+dotnet_naming_symbols.private_instance_fields.applicable_accessibilities = private
+dotnet_naming_style.underscore_camel_case.required_prefix = _
+dotnet_naming_style.underscore_camel_case.capitalization = camel_case
+
+# Static fields (private/internal) start with 's_'
+# Example: private static int s_myStaticField;
+dotnet_naming_rule.static_fields_should_start_with_s_underscore.severity = warning
+dotnet_naming_rule.static_fields_should_start_with_s_underscore.symbols = static_fields
+dotnet_naming_rule.static_fields_should_start_with_s_underscore.style = s_underscore_camel_case
+dotnet_naming_symbols.static_fields.applicable_kinds = field
+dotnet_naming_symbols.static_fields.applicable_accessibilities = private, internal
+dotnet_naming_symbols.static_fields.required_modifiers = static
+dotnet_naming_style.s_underscore_camel_case.required_prefix = s_
+dotnet_naming_style.s_underscore_camel_case.capitalization = camel_case
+
+# Thread static fields start with 't_'
+# Example: [ThreadStatic] private static int t_myThreadStaticField;
+dotnet_naming_rule.thread_static_fields_should_start_with_t_underscore.severity = warning
+dotnet_naming_rule.thread_static_fields_should_start_with_t_underscore.symbols = thread_static_fields
+dotnet_naming_rule.thread_static_fields_should_start_with_t_underscore.style = t_underscore_camel_case
+dotnet_naming_symbols.thread_static_fields.applicable_kinds = field
+dotnet_naming_symbols.thread_static_fields.applicable_accessibilities = private, internal
+dotnet_naming_symbols.thread_static_fields.required_modifiers = static
+dotnet_naming_symbols.thread_static_fields.required_attributes = System.ThreadStaticAttribute
+dotnet_naming_style.t_underscore_camel_case.required_prefix = t_
+dotnet_naming_style.t_underscore_camel_case.capitalization = camel_case
+
+# Generic type parameters should be 'PascalCase' and begin with 'T'
+# Example: class MyClass<TKey, TValue> { }
+dotnet_naming_rule.type_parameters_should_start_with_t.severity = warning
+dotnet_naming_rule.type_parameters_should_start_with_t.symbols = type_parameters
+dotnet_naming_rule.type_parameters_should_start_with_t.style = t_pascal_case
+dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
+dotnet_naming_style.t_pascal_case.required_prefix = T
+dotnet_naming_style.t_pascal_case.capitalization = pascal_case
+
 
 # IDE2000: Avoid multiple blank lines
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide2000
