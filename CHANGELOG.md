@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.2.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.7...config-2.2.0) (2026-01-04)
+
+
+### Features & Enhancements
+
+* Add AsyncFixer dependency and configuration file ([fd3f5d0](https://github.com/Kiruyuto/.NET-Config/commit/fd3f5d067f165120562ae5f228102cfc473404a2))
+
+
+### Bug Fixes
+
+* Rename SonarLint-specific file to respect usage of standalone nuget package ([60bb27f](https://github.com/Kiruyuto/.NET-Config/commit/60bb27f35b64dc1a8be854c6641772b67a417773))
+
+
+### Chores
+
+* Adjust `global_level` to 100 for SonarLint configuration; Remove unnecessary comments; Fix scripts path ([6a8894f](https://github.com/Kiruyuto/.NET-Config/commit/6a8894f61af7eb434f4c06e1c3bf58dc8a2d9eb3))
+
 ## [2.1.7](https://github.com/Kiruyuto/.NET-Config/compare/config-2.1.6...config-2.1.7) (2026-01-04)
 
 
