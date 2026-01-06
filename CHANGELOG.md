@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.3.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.2.1...config-2.3.0) (2026-01-06)
+
+
+### Features & Enhancements
+
+* Migrate from `.nuspec` to `.csproj`-based packaging ([#76](https://github.com/Kiruyuto/.NET-Config/issues/76)) ([af60b2d](https://github.com/Kiruyuto/.NET-Config/commit/af60b2d82cf5c34ea81c9d67e4de6a6f10ff405f))
+
+
+### Chores
+
+* Adjust global_level to 100 for AsyncFixer config ([e8248f3](https://github.com/Kiruyuto/.NET-Config/commit/e8248f3012716c5c4d84b557facfcd1f979e231e))
+
+
+### Documentation improvements
+
+* Adjust SonarAnalyzer-specific code analysis rules ([e9b9c1b](https://github.com/Kiruyuto/.NET-Config/commit/e9b9c1b17302d2389a73c9e607cad1b0d10174a6))
+* Fix trailing comments ([df20076](https://github.com/Kiruyuto/.NET-Config/commit/df200760361b6daa33be2718db724c025117aefa))
+
 ## [2.2.1](https://github.com/Kiruyuto/.NET-Config/compare/config-2.2.0...config-2.2.1) (2026-01-04)
 
 
