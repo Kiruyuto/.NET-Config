@@ -1,4 +1,10 @@
 <Project>
+  <!-- Import other props files -->
+  <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.Analyzers.props" />
+  <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.CI.props" />
+  <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.NugetAudit.props" />
+  <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.NugetAuthoring.props" />
+
   <PropertyGroup Label="Shared settings applicable to all build configurations">
     <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
     <AllowUnsafeBlocks Condition="'$(AllowUnsafeBlocks)' == ''">true</AllowUnsafeBlocks>
