@@ -20,3 +20,8 @@
   - Create new appropriately named `.globalconfig` file in [`files/`](./Kiruyuto.DotNet.Config/files/) directory with `is_global = true` and rule configurations.   
   This file should be atuomatically picked up by wildcard import from [`Analyzers.props`](./Kiruyuto.DotNet.Config/build/Kiruyuto.DotNet.Config.Analyzers.props)  
   New file should follow the existing naming and descriptive convention to maintain consistency with other config files.
+
+### Troubleshooting
+- Running `dotnet msbuild -pp:preprocessed.xml` in the consuming project can help debug issues with the imported configs.  
+  The generated `preprocessed.xml` file will contain the fully expanded MSBuild project file, including all imported `.props` files from the NuGet package.  
+  This allows you to verify that the configurations from the package are being correctly imported and applied to your project.
