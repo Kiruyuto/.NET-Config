@@ -203,11 +203,11 @@ dotnet_diagnostic.CA1067.severity = warning
 
 # CA1068: CancellationToken parameters must come last
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1068
-dotnet_diagnostic.CA1068.severity = error
+dotnet_diagnostic.CA1068.severity = warning
 
 # CA1069: Enums values should not be duplicated
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1069
-dotnet_diagnostic.CA1069.severity = error
+dotnet_diagnostic.CA1069.severity = warning
 
 # CA1070: Do not declare event fields as virtual
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1070
@@ -335,7 +335,7 @@ dotnet_diagnostic.CA1508.severity = warning
 
 # CA1509: Invalid entry in code metrics rule specification file
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1509
-dotnet_diagnostic.CA1509.severity = error
+dotnet_diagnostic.CA1509.severity = warning
 
 # CA1510: Use ArgumentNullException throw helper
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1510
@@ -1323,7 +1323,7 @@ dotnet_diagnostic.CA2253.severity = warning
 
 # CA2254: Template should be a static expression
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2254
-dotnet_diagnostic.CA2254.severity = error
+dotnet_diagnostic.CA2254.severity = warning
 
 # CA2255: The 'ModuleInitializer' attribute should not be used in libraries
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2255

@@ -7,19 +7,19 @@ is_global = true
 
 # AsyncFixer01: Unnecessary async/await usage
 # Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer01
-dotnet_diagnostic.AsyncFixer01.severity = error
+dotnet_diagnostic.AsyncFixer01.severity = warning
 
 # AsyncFixer02: Blocking calls inside async methods
 # Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer02
-dotnet_diagnostic.AsyncFixer02.severity = error
+dotnet_diagnostic.AsyncFixer02.severity = warning
 
 # AsyncFixer03: Async void methods and delegates
 # Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer03
-dotnet_diagnostic.AsyncFixer03.severity = error
+dotnet_diagnostic.AsyncFixer03.severity = warning
 
 # AsyncFixer04:	Unawaited async call in using block
 # Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer04
-dotnet_diagnostic.AsyncFixer04.severity = error
+dotnet_diagnostic.AsyncFixer04.severity = warning
 
 # AsyncFixer05: Nested Task from TaskFactory.StartNew
 # Help link: https://github.com/semihokur/AsyncFixer/blob/main/README.md#asyncfixer05
