@@ -12,7 +12,7 @@ permissions: read-all
 
 jobs:
   config:
-    runs-on: ["windows-latest"]
+    runs-on: ["ubuntu-latest"]
     timeout-minutes: 10
     steps:
       - name: "Checkout repo"
@@ -23,15 +23,5 @@ jobs:
         with:
           global-json-file: "global.json"
 
-      - uses: nuget/setup-nuget@323ab0502cd38fdc493335025a96c8fdb0edc71f # v2.0.1
-        with:
-          nuget-version: "latest"
-
       - name: "Pack"
-        run: nuget pack Kiruyuto.DotNet.Config.nuspec -ForceEnglishOutput -Version 0.0.1
-
-      - name: "Ensure scripts work"
-        shell: pwsh
-        run: |
-          ./scripts/PackAndRegister.ps1
-          ./scripts/RemovePackageAndUnregisterFeed.ps1
+        run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=0.0.1
