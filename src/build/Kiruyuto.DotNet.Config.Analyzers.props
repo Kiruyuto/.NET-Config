@@ -1,14 +1,10 @@
 <Project>
   <ItemGroup Label="Register analyzer configuration files and additional files">
     <!-- Register the editor/global config files -->
-    <EditorConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.editorconfig" />
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
 
     <!-- Register Banned Symbols -->
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
-
-    <!-- Register SonarAnalyzer editorconfig as AdditionalFile (Suggested 2023 workaround) -->
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\SonarAnalyzer.editorconfig" />
   </ItemGroup>
 
   <PropertyGroup Label="Analyzer related settings">
