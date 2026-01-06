@@ -1,5 +1,23 @@
 # Changelog
 
+## [2.3.1](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.0...config-2.3.1) (2026-01-06)
+
+
+### Bug Fixes
+
+* Invalid build package path ([f937881](https://github.com/Kiruyuto/.NET-Config/commit/f93788156769238788703afea28d2283811c17a5))
+* Remove `SonarAnalyzer` config from CodeQuality config ([77146f4](https://github.com/Kiruyuto/.NET-Config/commit/77146f48f05a2a2edc70cca805661522c7168110))
+
+
+### Chores
+
+* Rename CodeQuality config ([0c4831a](https://github.com/Kiruyuto/.NET-Config/commit/0c4831a7bd599366eb976506196e0a59594beeb5))
+
+
+### Documentation improvements
+
+* Update CONTRIBUTING.md with troubleshooting guidance for configs ([38b324c](https://github.com/Kiruyuto/.NET-Config/commit/38b324c969d47b94ff5c07845063903ef6948fc1))
+
 ## [2.3.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.2.1...config-2.3.0) (2026-01-06)
 
 
