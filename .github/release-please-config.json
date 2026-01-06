@@ -16,7 +16,9 @@
       "exclude-paths": [
         ".github",
         ".idea",
-        ".vscode"
+        ".vscode",
+        "CONTRIBUTING.md",
+        "CHANGELOG.md"
       ],
       "extra-files": [
         {
