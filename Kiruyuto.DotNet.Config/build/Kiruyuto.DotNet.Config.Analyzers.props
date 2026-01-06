@@ -1,9 +1,8 @@
 <Project>
   <ItemGroup Label="Register analyzer configuration files and additional files">
     <!-- Register the editor/global config files -->
-    <!-- This path is relative to packed directory structure -->
+    <!-- This path is relative to packed directory structure. Note that "MSBuildThisFileDirectory" comes with a trailing slash already -->
     <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)..\files\*.globalconfig" />
-
     <!-- Register Banned Symbols -->
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\BannedSymbols.txt" Visible="false" />
   </ItemGroup>
