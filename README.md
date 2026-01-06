@@ -7,16 +7,19 @@ This config contains rules changed and fine-tuned to my personal and work needs 
 ### Usage
 Add the [nuget](https://www.nuget.org/packages/Kiruyuto.DotNet.Config/#versions-body-tab) package to your project, and the configs will be automatically imported.
 
-> [!WARNING]
-> This package does not support transitive behavior. You need to add it to each project where you want to apply the configuration.
-
 > [!IMPORTANT]
 > It is recommended to use `Directory.Build.props` in your project over per `.csproj` configuration
 
 ### Structure overview
-- Dependencies can be found in [.nuspec file](./Kiruyuto.DotNet.Config.nuspec)
+- Dependencies can be found in [Kiruyuto.DotNet.Config.csproj](./Kiruyuto.DotNet.Config.csproj)
 - `.globalconfig`/`.editorconfig` rule configurations are located in [`src/files/` directory](./src/files/)
 - `.props` files are located in [`src/build/` directory](./src/build/). These are split into 'categories' for improved maintainability 
+
+### Building
+Run this script in the repository root to generate `.nupkg` file in "local-packages" directory:
+```bash
+dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages -p:PackageVersion=0.0.1
+```
 
 ### Contributing
 Useful links are located in [CONTRIBUTING.md](CONTRIBUTING.md) as well as some of the most important `TL;DRs`

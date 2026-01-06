@@ -14,7 +14,16 @@
       "release-type": "simple",
       "component-no-space": true,
       "exclude-paths": [
-        ".github"
+        ".github",
+        ".idea",
+        ".vscode"
+      ],
+      "extra-files": [
+        {
+          "type": "xml",
+          "path": "/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj",
+          "xpath": "//Project/PropertyGroup/Version"
+        }
       ]
     }
   },

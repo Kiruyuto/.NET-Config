@@ -4,9 +4,13 @@
 
 > [!IMPORTANT]
 > Every `.globalconfig` **needs** an `is_global = true` top level entry.  
-> All config files in this repository should be `.globalconfigs` unless otherwise noted.
+> All config files in this repository should be `.globalconfigs` to ensure wildcard imports work as intended.
 
 Useful links:
 - [How is the rule order applied?](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#precedence)
 - [About .globalconfigs](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#global-analyzerconfig)
 - [Distributing as NuGet pkg](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#distribution-in-nuget-packages)
+
+### Adding new rules
+1. Add new package reference to `[Kiruyuto.DotNet.Config.csproj](./Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj)`
+2. Add new, appropriately named `.globalconfig` file to `[files/](./Kiruyuto.DotNet.Config/files/)` directory with `is_global = true`

@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <SuppressDependenciesWhenPacking>false</SuppressDependenciesWhenPacking>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <NoWarn>$(NoWarn);NU5128</NoWarn>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <IsPackable>true</IsPackable>
+
+        <!-- Package Metadata -->
+        <PackageId>Kiruyuto.DotNet.Config</PackageId>
+        <Title>Kiruyuto's .NET Code style and config</Title>
+        <Version>2.2.1</Version>
+        <Authors>Kiruyuto</Authors>
+        <Description>A personal NuGet package containing rules and analyzers to share .NET code style and configuration across multiple projects.</Description>
+        <PackageIcon>logo-transparent-bg.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/Kiruyuto/.NET-Config</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/Kiruyuto/.NET-Config.git</RepositoryUrl>
+        <RepositoryBranch>master</RepositoryBranch>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Analyzers and Dependencies -->
+        <PackageReference Include="AsyncFixer" Version="2.1.0" PrivateAssets="none" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="10.17.0.131074" PrivateAssets="none" />
+        <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="3.3.4" PrivateAssets="none" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="10.0.1" PrivateAssets="none" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="none" />
+        <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" PrivateAssets="none" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Package Content Files -->
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="resources\logo-transparent-bg.png" Pack="true" PackagePath="\" />
+
+        <None Include="build\*" Pack="true" PackagePath="\" />
+        <None Include="files\*" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>
