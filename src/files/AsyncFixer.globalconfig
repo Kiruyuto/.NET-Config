@@ -1,5 +1,5 @@
 is_global = true
-global_level = 110
+global_level = 100
 
 # ====================================================================================================
 # Description: Contains AsyncFixer-specific code analysis rules
