@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.3.3](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.2...config-2.3.3) (2026-01-06)
+
+
+### Chores
+
+* Add CA1873 max_log_level setting ([7b8b3fa](https://github.com/Kiruyuto/.NET-Config/commit/7b8b3fac0b2b5e5fc5c37490ae4ce297aa8a3c94))
+* Adjust AsyncFixer severity to warning ([2581ab6](https://github.com/Kiruyuto/.NET-Config/commit/2581ab6124af80a7e1025a6ac1b93fe497393d51))
+* Adjust CA1068 severity to warning ([2581ab6](https://github.com/Kiruyuto/.NET-Config/commit/2581ab6124af80a7e1025a6ac1b93fe497393d51))
+* Adjust CA1069 severity to warning ([2581ab6](https://github.com/Kiruyuto/.NET-Config/commit/2581ab6124af80a7e1025a6ac1b93fe497393d51))
+* Adjust CA1509 severity to warning ([2581ab6](https://github.com/Kiruyuto/.NET-Config/commit/2581ab6124af80a7e1025a6ac1b93fe497393d51))
+* Adjust CA2254 severity to warning ([2581ab6](https://github.com/Kiruyuto/.NET-Config/commit/2581ab6124af80a7e1025a6ac1b93fe497393d51))
+
+
+### Documentation improvements
+
+* Add note on CA1873 rule ([7b8b3fa](https://github.com/Kiruyuto/.NET-Config/commit/7b8b3fac0b2b5e5fc5c37490ae4ce297aa8a3c94))
+* Add note on NuGet auditing in NugetAudit.props ([e368ec9](https://github.com/Kiruyuto/.NET-Config/commit/e368ec9fb57b27c843f07b411c50809a6db09b11))
+* Refine comment in Analyzers.props ([e368ec9](https://github.com/Kiruyuto/.NET-Config/commit/e368ec9fb57b27c843f07b411c50809a6db09b11))
+* Remove redundant comment in NugetAuthoring.props ([e368ec9](https://github.com/Kiruyuto/.NET-Config/commit/e368ec9fb57b27c843f07b411c50809a6db09b11))
+* Update comment for CI detection in CI.props ([e368ec9](https://github.com/Kiruyuto/.NET-Config/commit/e368ec9fb57b27c843f07b411c50809a6db09b11))
+
 ## [2.3.2](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.1...config-2.3.2) (2026-01-06)
 
 
