@@ -577,17 +577,6 @@ dotnet_naming_symbols.interfaces.applicable_accessibilities = *
 dotnet_naming_style.begins_with_i_style.required_prefix = I
 dotnet_naming_style.begins_with_i_style.capitalization = pascal_case
 
-# Attribute types must end with 'Attribute'
-# Example: class MyCustomAttribute : Attribute { }
-dotnet_naming_rule.attributes_should_end_with_attribute.severity = warning
-dotnet_naming_rule.attributes_should_end_with_attribute.symbols = attributes
-dotnet_naming_rule.attributes_should_end_with_attribute.style = ends_with_attribute_style
-dotnet_naming_symbols.attributes.applicable_kinds = class
-dotnet_naming_symbols.attributes.applicable_accessibilities = *
-dotnet_naming_symbols.attributes.required_base_types = System.Attribute
-dotnet_naming_style.ends_with_attribute_style.required_suffix = Attribute
-dotnet_naming_style.ends_with_attribute_style.capitalization = pascal_case
-
 # Class names should be 'PascalCase'
 # Example: class MyClass { }
 dotnet_naming_rule.classes_should_be_pascal_case.severity = warning
