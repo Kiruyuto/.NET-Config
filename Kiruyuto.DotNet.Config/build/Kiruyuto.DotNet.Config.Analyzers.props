@@ -2,10 +2,10 @@
   <ItemGroup Label="Register analyzer configuration files and additional files">
     <!-- Register the editor/global config files -->
     <!-- This path is relative to packed directory structure -->
-    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)\..\files\*.globalconfig" />
+    <GlobalAnalyzerConfigFiles Include="$(MSBuildThisFileDirectory)..\files\*.globalconfig" />
 
     <!-- Register Banned Symbols -->
-    <AdditionalFiles Include="$(MSBuildThisFileDirectory)\..\files\BannedSymbols.txt" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\BannedSymbols.txt" Visible="false" />
   </ItemGroup>
 
   <PropertyGroup Label="Analyzer related settings">
