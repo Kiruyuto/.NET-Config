@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.3.2](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.1...config-2.3.2) (2026-01-06)
+
+
+### Chores
+
+* Adjust CA2201 severity to none ([71b5651](https://github.com/Kiruyuto/.NET-Config/commit/71b56514d8d10b3480608e02005bc92d080ef341))
+* Remove attribute naming rule from code style configuration ([12c0235](https://github.com/Kiruyuto/.NET-Config/commit/12c0235d47d25e09c3369ded577a4a25b6d0af05))
+
+
+### Documentation improvements
+
+* Update README.md with building and local testing instructions ([5d38ab2](https://github.com/Kiruyuto/.NET-Config/commit/5d38ab2bbfdce7396768b29a5fc6322c983eb6d0))
+
 ## [2.3.1](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.0...config-2.3.1) (2026-01-06)
 
 
