@@ -248,7 +248,8 @@ csharp_new_line_before_open_brace = all
 csharp_new_line_before_else = true
 csharp_new_line_before_catch = true
 csharp_new_line_before_finally = true
-# csharp_new_line_before_members_in_object_initializers = true # Disabled until ReSharper fixes the issue: https://youtrack.jetbrains.com/issue/RSRP-486359/csharpnewlinebeforemembersinobjectinitializers-true-doesnt-add-line-breaks-for-each-initializer
+# Disabled until ReSharper fixes the issue: https://youtrack.jetbrains.com/issue/RSRP-486359/csharpnewlinebeforemembersinobjectinitializers-true-doesnt-add-line-breaks-for-each-initializer
+# csharp_new_line_before_members_in_object_initializers = true
 csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 # Indentation options
@@ -284,7 +285,8 @@ csharp_space_between_square_brackets = false
 # Wrap options
 # Disabled until all issues are resolved
 #csharp_preserve_single_line_blocks = true
-#csharp_preserve_single_line_statements = true # This one should be disabled, but as of now it forces multiline "IFs" and causes issues with single-line braces options
+# This one should be disabled, but as of now it forces multiline "IFs" and causes issues with single-line braces options
+#csharp_preserve_single_line_statements = true
 
 # IDE0056: Use index operator
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0056
