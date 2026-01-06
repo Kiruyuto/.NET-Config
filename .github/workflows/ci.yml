@@ -24,4 +24,4 @@ jobs:
           global-json-file: "global.json"
 
       - name: "Pack"
-        run: dotnet pack Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=0.0.1
+        run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=0.0.1

@@ -58,7 +58,7 @@ jobs:
           global-json-file: "global.json"
       
       - name: "Pack"
-        run: dotnet pack Kiruyuto.DotNet.Config.csproj -c Release -o outputFiles -p:PackageVersion=${{ needs.release-please.outputs.version }}
+        run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o outputFiles -p:PackageVersion=${{ needs.release-please.outputs.version }}
       
       - name: "Push to NuGet"
         run: dotnet nuget push ./outputFiles/${{ env.PackageName }} --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.NUGET_KEY }}
