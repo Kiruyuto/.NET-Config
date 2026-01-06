@@ -1,4 +1,5 @@
 <Project>
+  <!-- https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages -->
   <PropertyGroup Label="NuGet Audit">
     <NuGetAudit Condition="'$(NuGetAudit)' == ''">true</NuGetAudit>
     <NuGetAuditMode Condition="'$(NuGetAuditMode)' == ''">all</NuGetAuditMode>

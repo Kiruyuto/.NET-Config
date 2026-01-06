@@ -3,8 +3,8 @@
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true' OR '$(CI)' == 'true'">true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
+  <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#treat-warnings-as-errors -->
   <PropertyGroup Label="Various project metadata">
-    <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#treat-warnings-as-errors -->
     <TreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</TreatWarningsAsErrors>
     <CodeAnalysisTreatWarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true'">true</CodeAnalysisTreatWarningsAsErrors>
     <MSBuildTreatWarningsAsErrors Condition="'$(MSBuildTreatWarningsAsErrors)' == '' AND ($(ContinuousIntegrationBuild) == 'true' OR '$(Configuration)' == 'Release')">true</MSBuildTreatWarningsAsErrors>
