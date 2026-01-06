@@ -11,7 +11,7 @@
         <!-- Package Metadata -->
         <PackageId>Kiruyuto.DotNet.Config</PackageId>
         <Title>Kiruyuto's .NET Code style and config</Title>
-        <Version>2.3.1</Version>
+        <Version>2.3.2</Version>
         <Authors>Kiruyuto</Authors>
         <Description>A personal NuGet package containing rules and analyzers to share .NET code style and configuration across multiple projects.</Description>
         <PackageIcon>logo-transparent-bg.png</PackageIcon>
