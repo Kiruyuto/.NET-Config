@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.4](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.3...config-2.3.4) (2026-01-08)
+
+
+### Chores
+
+* **dependencies:** Update dependency SonarAnalyzer.CSharp to 10.18.0.131500 (dotnet) ([#80](https://github.com/Kiruyuto/.NET-Config/issues/80)) ([2db28ce](https://github.com/Kiruyuto/.NET-Config/commit/2db28cee083f2c2ff3fc84824b89ca7c6b638f4e))
+
 ## [2.3.3](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.2...config-2.3.3) (2026-01-06)
 
 
