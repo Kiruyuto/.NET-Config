@@ -5,9 +5,6 @@
     <RequireLicenseAcceptance Condition="'$(RequireLicenseAcceptance)' == ''">false</RequireLicenseAcceptance>
     <RepositoryType Condition="'$(RepositoryType)' == ''">git</RepositoryType>
 
-    <!-- https://github.com/dotnet/sourcelink/issues/659#issuecomment-711288537 -->
-    <PublishRepositoryUrl Condition="'$(PublishRepositoryUrl)' == ''">true</PublishRepositoryUrl>
-
     <!-- Embeds files that are not tracked by source control into the PDBs. Helps with source generated files. -->
     <!-- Set by default for .NET8+ -->
     <EmbedUntrackedSources Condition="'$(EmbedUntrackedSources)' == ''">true</EmbedUntrackedSources>

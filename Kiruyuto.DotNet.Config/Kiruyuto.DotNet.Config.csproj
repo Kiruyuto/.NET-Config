@@ -30,17 +30,16 @@
         <PackageReference Include="SonarAnalyzer.CSharp" Version="10.18.0.131500" PrivateAssets="none"/>
         <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="3.3.4" PrivateAssets="none"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="10.0.1" PrivateAssets="none"/>
-        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="none"/>
         <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" PrivateAssets="none"/>
     </ItemGroup>
 
     <ItemGroup>
         <!-- Package Content Files -->
-        <None Include="..\README.md" Pack="true" PackagePath="\"/>
-        <None Include="..\LICENSE" Pack="true" PackagePath="\"/>
-        <None Include="resources\logo-transparent-bg.png" Pack="true" PackagePath="\"/>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\LICENSE" Pack="true" PackagePath="\" />
+        <None Include="resources\logo-transparent-bg.png" Pack="true" PackagePath="\" />
 
-        <None Include="build\**" Pack="true" PackagePath="build\"/>
-        <None Include="files\**" Pack="true" PackagePath="files\"/>
+        <None Include="build\**" Pack="true" PackagePath="build\" />
+        <None Include="files\**" Pack="true" PackagePath="files\" />
     </ItemGroup>
 </Project>
