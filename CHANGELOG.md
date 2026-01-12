@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.5](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.4...config-2.3.5) (2026-01-12)
+
+
+### Chores
+
+* Remove default SourceLink dependency ([c0837e4](https://github.com/Kiruyuto/.NET-Config/commit/c0837e40a08c382592df1493b8c5db1b98b1c99c))
+
 ## [2.3.4](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.3...config-2.3.4) (2026-01-08)
 
 
