@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.7](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.6...config-2.3.7) (2026-01-30)
+
+
+### Chores
+
+* **dependencies:** Update dependency dotnet-sdk to v10.0.102 (dotnet) ([#86](https://github.com/Kiruyuto/.NET-Config/issues/86)) ([070623c](https://github.com/Kiruyuto/.NET-Config/commit/070623cb02fc19db6f61597cfee2a4bb7139053b))
+* **dependencies:** Update dependency SonarAnalyzer.CSharp to 10.19.0.132793 (dotnet) ([#89](https://github.com/Kiruyuto/.NET-Config/issues/89)) ([d4ac5e6](https://github.com/Kiruyuto/.NET-Config/commit/d4ac5e6f84e2784f2cd6f217831392d288cdf692))
+
 ## [2.3.6](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.5...config-2.3.6) (2026-01-14)
 
 
