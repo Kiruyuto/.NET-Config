@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.8](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.7...config-2.3.8) (2026-02-07)
+
+
+### Chores
+
+* Adjust CA1819 severity to none ([07b2fe3](https://github.com/Kiruyuto/.NET-Config/commit/07b2fe3a5e8d12c342aef19fc73858b48886459f))
+
 ## [2.3.7](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.6...config-2.3.7) (2026-01-30)
 
 
