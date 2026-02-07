@@ -477,7 +477,8 @@ dotnet_diagnostic.CA1815.severity = warning
 
 # CA1819: Properties should not return arrays
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1819
-dotnet_diagnostic.CA1819.severity = warning
+# Note: Constantly flags DTOs and such. Too much noise.
+dotnet_diagnostic.CA1819.severity = none
 
 # CA1820: Test for empty strings using string length
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1820
