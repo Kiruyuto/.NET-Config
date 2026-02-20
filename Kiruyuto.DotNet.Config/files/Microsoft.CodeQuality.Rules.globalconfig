@@ -655,7 +655,8 @@ dotnet_diagnostic.CA1862.severity = warning
 
 # CA1863: Use 'CompositeFormat'
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1863
-dotnet_diagnostic.CA1863.severity = warning
+# Note: Too much noise with modern string interpolation, in many cases the performance impact is negligible and the readability improvement is significant. 
+dotnet_diagnostic.CA1863.severity = none
 
 # CA1864: Prefer the 'IDictionary.TryAdd(TKey, TValue)' method
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1864
