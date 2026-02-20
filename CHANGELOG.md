@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.3.9](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.8...config-2.3.9) (2026-02-20)
+
+
+### Chores
+
+* Adjust CA1863 severity to none ([fcd4327](https://github.com/Kiruyuto/.NET-Config/commit/fcd432755ac8f438044fb26a04d9b98615450aab))
+* **dependencies:** Update dependency dotnet-sdk to v10.0.103 (dotnet) ([#93](https://github.com/Kiruyuto/.NET-Config/issues/93)) ([8434418](https://github.com/Kiruyuto/.NET-Config/commit/84344184960b93f03239ab67b1e827ecb57992f9))
+* **dependencies:** Update dependency Microsoft.EntityFrameworkCore.Analyzers to 10.0.3 (dotnet) ([#91](https://github.com/Kiruyuto/.NET-Config/issues/91)) ([9c61255](https://github.com/Kiruyuto/.NET-Config/commit/9c612554440108cba0fc10357549bb6916ba6cfa))
+
 ## [2.3.8](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.7...config-2.3.8) (2026-02-07)
 
 
