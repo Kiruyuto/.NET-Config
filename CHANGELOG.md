@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.11](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.10...config-2.3.11) (2026-03-12)
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies ([#97](https://github.com/Kiruyuto/.NET-Config/issues/97)) ([ab83e20](https://github.com/Kiruyuto/.NET-Config/commit/ab83e20939598c2c6c26038031a8d6f22ff562ac))
+
 ## [2.3.10](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.9...config-2.3.10) (2026-02-25)
 
 
