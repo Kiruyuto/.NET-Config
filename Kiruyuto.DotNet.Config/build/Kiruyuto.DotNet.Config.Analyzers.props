@@ -1,4 +1,8 @@
 <Project>
+  <PropertyGroup Label="Banned API configuration">
+    <KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans Condition="'$(KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans)' == ''">true</KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans>
+  </PropertyGroup>
+
   <ItemGroup Label="Register analyzer configuration files and additional files">
     <!-- Register the editor/global config files -->
     <!-- This path is relative to packed directory structure -->
@@ -7,6 +11,7 @@
     
     <!-- Register Banned Symbols -->
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\BannedSymbols.txt" Visible="false" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\BannedSymbols.EntityFrameworkCore.txt" Condition="'$(KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans)' == 'true'" Visible="false" />
   </ItemGroup>
 
   <PropertyGroup Label="Analyzer related settings">

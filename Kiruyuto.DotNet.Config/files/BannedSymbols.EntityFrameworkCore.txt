@@ -1,0 +1,11 @@
+# Entity Framework Core async add APIs are normally unnecessary and may hide sync-over-async misunderstandings.
+# Disable this file per project if you intentionally use async value generators such as SequenceHiLo.
+
+M:Microsoft.EntityFrameworkCore.DbContext.AddAsync``1(``0,System.Threading.CancellationToken);Use Add instead. AddAsync is only needed for special async value generators
+M:Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object,System.Threading.CancellationToken);Use Add instead. AddAsync is only needed for special async value generators
+M:Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[]);Use AddRange instead. AddRangeAsync is only needed for special async value generators
+M:Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable{System.Object},System.Threading.CancellationToken);Use AddRange instead. AddRangeAsync is only needed for special async value generators
+
+M:Microsoft.EntityFrameworkCore.DbSet`1.AddAsync(`0,System.Threading.CancellationToken);Use Add instead. AddAsync is only needed for special async value generators
+M:Microsoft.EntityFrameworkCore.DbSet`1.AddRangeAsync(`0[]);Use AddRange instead. AddRangeAsync is only needed for special async value generators
+M:Microsoft.EntityFrameworkCore.DbSet`1.AddRangeAsync(System.Collections.Generic.IEnumerable{`0},System.Threading.CancellationToken);Use AddRange instead. AddRangeAsync is only needed for special async value generators

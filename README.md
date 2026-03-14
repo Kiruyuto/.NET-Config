@@ -10,6 +10,16 @@ Add the [NuGet](https://www.nuget.org/packages/Kiruyuto.DotNet.Config/#versions-
 > [!IMPORTANT]
 > It is recommended to use `Directory.Build.props` in your project over per `.csproj` configuration
 
+Projects that intentionally use EF Core async value generators, such as HiLo, can opt out of only the `AddAsync` and `AddRangeAsync` bans:
+
+```xml
+<Project>
+  <PropertyGroup>
+    <KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans>false</KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans>
+  </PropertyGroup>
+</Project>
+```
+
 ### Structure overview
 - Dependencies can be found in [Kiruyuto.DotNet.Config.csproj](./Kiruyuto.DotNet.Config.csproj)
 - `.globalconfig` rule configurations are located in [`files/` directory](./Kiruyuto.DotNet.Config/files/)
