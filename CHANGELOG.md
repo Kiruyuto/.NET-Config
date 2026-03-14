@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.4.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.11...config-2.4.0) (2026-03-14)
+
+
+### Features & Enhancements
+
+* Explicitly ban certain EF Core `Async` methods ([c6d57b5](https://github.com/Kiruyuto/.NET-Config/commit/c6d57b537fdac38d10e3293613e7b2c3a8fe7bd4))
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies ([#100](https://github.com/Kiruyuto/.NET-Config/issues/100)) ([34c431b](https://github.com/Kiruyuto/.NET-Config/commit/34c431b3d2fa818a52f93568909638b4f8d49f45))
+
 ## [2.3.11](https://github.com/Kiruyuto/.NET-Config/compare/config-2.3.10...config-2.3.11) (2026-03-12)
 
 
