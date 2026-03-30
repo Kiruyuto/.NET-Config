@@ -27,7 +27,7 @@
     <ItemGroup>
         <!-- Analyzers and Dependencies -->
         <PackageReference Include="AsyncFixer" Version="2.1.0" PrivateAssets="none"/>
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="10.21.0.135717" PrivateAssets="none"/>
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="10.22.0.136894" PrivateAssets="none"/>
         <PackageReference Include="Microsoft.CodeAnalysis.BannedApiAnalyzers" Version="3.3.4" PrivateAssets="none"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="10.0.5" PrivateAssets="none"/>
         <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" PrivateAssets="none"/>
