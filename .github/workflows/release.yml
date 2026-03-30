@@ -24,7 +24,7 @@ jobs:
         with:
           app-id: ${{ secrets.DEV_APP_ID }}
           private-key: ${{ secrets.DEV_APP_PRIVATE_KEY }}
-      
+
       - name: "Run release-please"
         uses: googleapis/release-please-action@16a9c90856f42705d54a6fda1823352bdc62cf38 # v4.4.0
         id: run-release-please
@@ -32,7 +32,7 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
           config-file: .github/release-please-config.json
           manifest-file: .github/.release-please-manifest.json
-      
+
       - name: "Echo json"
         run: echo "$OUTPUTS"
         shell: bash
@@ -51,18 +51,24 @@ jobs:
     steps:
       - name: "Checkout repo"
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-      
+
       - name: "Setup .NET"
         uses: actions/setup-dotnet@c2fa09f4bde5ebb9d1777cf28262a3eb3db3ced7 # v5.2.0
         with:
           global-json-file: "global.json"
-      
+
       - name: "Pack"
         run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o outputFiles -p:PackageVersion=${{ needs.release-please.outputs.version }}
-      
+
+      - name: NuGet login
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
       - name: "Push to NuGet"
-        run: dotnet nuget push ./outputFiles/${{ env.PackageName }} --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ secrets.NUGET_KEY }}
-      
+        run: dotnet nuget push ./outputFiles/${{ env.PackageName }} --source https://api.nuget.org/v3/index.json --skip-duplicate --api-key ${{ steps.login.outputs.NUGET_API_KEY }}
+
       - name: "Add GitHub Packages source and push"
         run: |
           dotnet nuget add source --username ${{ github.actor || github.repository_owner }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name GitHub "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
