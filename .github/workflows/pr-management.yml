@@ -1,7 +1,9 @@
 name: "PR Management"
 
 on:
-  pull_request:
+  # Safe to use pull_request_target here because this workflow only reads PR metadata and writes comments/labels. 
+  # Do not checkout or execute PR code.
+  pull_request_target:
     types: ["opened", "edited", "synchronize", "ready_for_review", "reopened"]
     branches: ["master"]
 
@@ -9,16 +11,17 @@ concurrency:
   group: "${{ github.head_ref || github.ref }}-${{ github.workflow }}"
   cancel-in-progress: true
 
-permissions:
-  pull-requests: write
-  contents: read
-  issues: write
+permissions: {}
 
 jobs:
   validate-pr-title:
     name: "Validate & Label PR"
     runs-on: ["ubuntu-latest"]
     timeout-minutes: 5
+    permissions:
+      pull-requests: write
+      contents: read
+      issues: write
     steps:
       - name: "Generate App Token"
         uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3.1.1
