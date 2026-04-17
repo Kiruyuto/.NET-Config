@@ -1,7 +1,9 @@
 name: "PR Management"
 
 on:
-  pull_request:
+  # Safe to use pull_request_target here because this workflow only reads PR metadata and writes comments/labels.
+  # Do not checkout or execute PR code.
+  pull_request_target:
     types: ["opened", "edited", "synchronize", "ready_for_review", "reopened"]
     branches: ["master"]
 
@@ -9,10 +11,7 @@ concurrency:
   group: "${{ github.head_ref || github.ref }}-${{ github.workflow }}"
   cancel-in-progress: true
 
-permissions:
-  pull-requests: write
-  contents: read
-  issues: write
+permissions: {}
 
 jobs:
   validate-pr-title:
@@ -26,6 +25,9 @@ jobs:
         with:
           app-id: ${{ secrets.DEV_APP_CLIENT_ID }}
           private-key: ${{ secrets.DEV_APP_PRIVATE_KEY }}
+          permission-pull-requests: write
+          permission-issues: write
+
       - name: "Check PR Title"
         id: lint_pr_title
         uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
@@ -57,6 +59,7 @@ jobs:
             |____________ Type
         env:
           GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
+
       - name: "Add PR comment"
         uses: marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0 # v3.0.4
         if: always() && (steps.lint_pr_title.outputs.error_message != null)
@@ -71,6 +74,7 @@ jobs:
 
             Details:
             ${{ steps.lint_pr_title.outputs.error_message }}
+
       - name: "Remove PR comment"
         uses: marocchino/sticky-pull-request-comment@0ea0beb66eb9baf113663a64ec522f60e49231c0 # v3.0.4
         if: ${{ steps.lint_pr_title.outputs.error_message == null }}
