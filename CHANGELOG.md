@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.4.3](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.2...config-2.4.3) (2026-04-17)
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies ([#110](https://github.com/Kiruyuto/.NET-Config/issues/110)) ([c82bf2a](https://github.com/Kiruyuto/.NET-Config/commit/c82bf2ad834cf7aa7769ccaca0e8481b375e64bb))
+
+
+### Documentation improvements
+
+* Add exclusion for generated code in BannedApiAnalyzers config ([5f0d7a4](https://github.com/Kiruyuto/.NET-Config/commit/5f0d7a4ed8248c48880cd9c59034673daa7e30f3))
+* Improve README presentation and add social banner/preview assets ([f73f4ff](https://github.com/Kiruyuto/.NET-Config/commit/f73f4ffaf1b1880f058307d49d04b272614a8041))
+* Move `Building & Local testing` from README to CONTRIBUTING.md ([23ff987](https://github.com/Kiruyuto/.NET-Config/commit/23ff987e11e69bb59c02a17f13998060aa168a42))
+
 ## [2.4.2](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.1...config-2.4.2) (2026-04-12)
 
 
