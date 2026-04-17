@@ -5,6 +5,10 @@ is_global = true
 # Help link: https://github.com/dotnet/roslyn/blob/main/src/RoslynAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers/BannedApiAnalyzers.Help.md
 # ====================================================================================================
 
+# Excludes generated code from the analysis
+# Help link: https://github.com/dotnet/roslyn/commit/1ba62c4cbec09ba7a1f6b867e36cacf2efc9734b
+dotnet_banned_api_analyzer.exclude_generated_code = true
+
 # RS0030: Do not use banned APIs
 # Help link: https://github.com/dotnet/roslyn/blob/main/src/RoslynAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers/Microsoft.CodeAnalysis.BannedApiAnalyzers.md#rs0030-do-not-use-banned-apis
 dotnet_diagnostic.RS0030.severity = warning
