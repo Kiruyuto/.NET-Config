@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.4](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.3...config-2.4.4) (2026-04-30)
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies ([#115](https://github.com/Kiruyuto/.NET-Config/issues/115)) ([edfd590](https://github.com/Kiruyuto/.NET-Config/commit/edfd59008238f34c6d230935da8bafe5efe31514))
+
 ## [2.4.3](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.2...config-2.4.3) (2026-04-17)
 
 
