@@ -27,6 +27,7 @@ jobs:
           private-key: ${{ secrets.DEV_APP_PRIVATE_KEY }}
           permission-pull-requests: write
           permission-issues: write
+          permission-statuses: write
 
       - name: "Check PR Title"
         id: lint_pr_title
