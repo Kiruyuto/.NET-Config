@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.6](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.5...config-2.4.6) (2026-05-19)
+
+
+### Chores
+
+* **dependencies:** Update dependency dotnet-sdk to v10.0.300 ([#120](https://github.com/Kiruyuto/.NET-Config/issues/120)) ([4ee917e](https://github.com/Kiruyuto/.NET-Config/commit/4ee917eafe2d3a51bffa8379303b77565804fc0c))
+
 ## [2.4.5](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.4...config-2.4.5) (2026-05-12)
 
 
