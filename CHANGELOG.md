@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.4.9](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.8...config-2.4.9) (2026-07-06)
+
+
+### Chores
+
+* **dependencies:** Update .NET Major dependencies (major) ([#133](https://github.com/Kiruyuto/.NET-Config/issues/133)) ([541a791](https://github.com/Kiruyuto/.NET-Config/commit/541a791868fdb05be3936ce3c9604a1e96fbf5fb))
+* **dependencies:** Update dependency SonarAnalyzer.CSharp to 10.28.0.143324 ([#131](https://github.com/Kiruyuto/.NET-Config/issues/131)) ([1510a68](https://github.com/Kiruyuto/.NET-Config/commit/1510a68067c54350601788a467cbe867f6c331f4))
+
 ## [2.4.8](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.7...config-2.4.8) (2026-06-10)
 
 
