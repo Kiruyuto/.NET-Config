@@ -12,6 +12,7 @@
     <!-- Register Banned Symbols -->
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\BannedSymbols.txt" Visible="false" />
     <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\BannedSymbols.EntityFrameworkCore.txt" Condition="'$(KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans)' == 'true'" Visible="false" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)..\files\vs-threading.SyncMethodsToExcludeFromVSTHRD103.EntityFrameworkCore.txt" Condition="'$(KiruyutoDotNetConfigEnableEntityFrameworkCoreAsyncAddBans)' == 'true'" Visible="false" />
   </ItemGroup>
 
   <PropertyGroup Label="Analyzer related settings">

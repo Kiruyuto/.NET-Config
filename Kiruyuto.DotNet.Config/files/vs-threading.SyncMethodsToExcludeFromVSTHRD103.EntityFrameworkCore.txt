@@ -1,0 +1,7 @@
+# EF Core Add/AddRange APIs normally only start change tracking.
+# EF Core recommends the non-async methods except for uncommon async value generators such as SequenceHiLo.
+
+[Microsoft.EntityFrameworkCore.DbSet]::Add
+[Microsoft.EntityFrameworkCore.DbSet]::AddRange
+[Microsoft.EntityFrameworkCore.DbContext]::Add
+[Microsoft.EntityFrameworkCore.DbContext]::AddRange
