@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.10](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.9...config-2.4.10) (2026-07-06)
+
+
+### Bug Fixes
+
+* Suppress `VSTHRD103` for EF Core `Add` methods ([e02be1d](https://github.com/Kiruyuto/.NET-Config/commit/e02be1ddd75de634965034e68324fe1c125ae00a))
+
 ## [2.4.9](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.8...config-2.4.9) (2026-07-06)
 
 
