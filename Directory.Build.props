@@ -1,0 +1,13 @@
+<Project>
+  <!-- https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages -->
+  <!-- NuGet excludes package build imports while generating the restore graph, so audit policy must be repository-owned. -->
+  <PropertyGroup Label="NuGet Audit">
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <WarningsAsErrors Condition="'$(ContinuousIntegrationBuild)' == 'true' OR '$(GITHUB_ACTIONS)' == 'true' OR '$(CI)' == 'true' OR '$(Configuration)' == 'Release'">$(WarningsAsErrors);NU1903;NU1904</WarningsAsErrors>
+
+    <!-- Keep audit-source failures and low/moderate vulnerabilities visible without making them fatal when TreatWarningsAsErrors is enabled. -->
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1900;NU1901;NU1902;NU1905</WarningsNotAsErrors>
+  </PropertyGroup>
+</Project>

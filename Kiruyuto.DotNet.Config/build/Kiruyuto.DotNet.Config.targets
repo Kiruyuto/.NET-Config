@@ -1,0 +1,12 @@
+<Project>
+  <Target Name="KiruyutoDotNetConfigValidateCompatibility" BeforeTargets="PrepareForBuild" Condition="'$(IsCrossTargetingBuild)' != 'true'">
+    <Error Code="KDC1001"
+      Condition="'$(TargetFrameworkIdentifier)' != '.NETCoreApp' OR '$(TargetFrameworkVersion)' != 'v10.0'"
+      Text="Kiruyuto.DotNet.Config supports only .NET 10 target frameworks (net10.0 and platform-specific net10.0 TFMs). Project '$(MSBuildProjectName)' targets '$(TargetFramework)'."
+    />
+    <Error Code="KDC1002"
+      Condition="'$(Language)' != 'C#'"
+      Text="Kiruyuto.DotNet.Config supports only C# projects. Project '$(MSBuildProjectName)' uses '$(Language)'."
+    />
+  </Target>
+</Project>

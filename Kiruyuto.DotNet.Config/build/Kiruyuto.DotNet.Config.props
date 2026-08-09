@@ -2,7 +2,6 @@
   <!-- Import other props files -->
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.Analyzers.props" />
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.CI.props" />
-  <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.NugetAudit.props" />
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.NugetAuthoring.props" />
 
   <PropertyGroup Label="Shared settings applicable to all build configurations">
@@ -15,7 +14,6 @@
 
     <!-- https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#publishdocumentationfile -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>$(NoWarn);CS1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(Language)' == 'C#' AND ('$(ImplicitUsings)' == 'true' OR '$(ImplicitUsings)' == 'enable')">
@@ -25,6 +23,5 @@
 
   <PropertyGroup Label="Shared settings evaluated only in 'Release' build configuration" Condition="'$(Configuration)' == 'Release'">
     <Optimize>true</Optimize>
-    <DebugType Condition="'$(DebugType)' == ''">embedded</DebugType>
   </PropertyGroup>
 </Project>
