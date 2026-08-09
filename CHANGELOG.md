@@ -1,5 +1,26 @@
 # Changelog
 
+## [3.0.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.14...config-3.0.0) (2026-08-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* Correct package compatibility and build defaults
+
+### Bug Fixes
+
+* Correct package compatibility and build defaults ([25bd3f6](https://github.com/Kiruyuto/.NET-Config/commit/25bd3f6b1ddb202ad6b72bd09c80d3d54479b6e9))
+
+
+### Chores
+
+* Refine analyzer and banned API policies ([25de079](https://github.com/Kiruyuto/.NET-Config/commit/25de079083de97fd6a430d27707c5d280e3b1f2f))
+
+
+### Documentation improvements
+
+* Refresh package and contribution guidance ([34260c4](https://github.com/Kiruyuto/.NET-Config/commit/34260c42fd84fb8f5c048e6e273bceba8a30917d))
+
 ## [2.4.14](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.13...config-2.4.14) (2026-08-03)
 
 
