@@ -1,4 +1,4 @@
-1. Messages should follow the conventional commit message format (Omitting optional scope)
+1. Messages should follow the conventional commit message format; scopes are optional
 2. Documentation (note, help links, description, etc.) changes or additions should have a type of "docs"
    - This includes adding or modifying comment lines (lines starting with `#`)
    - Format: "docs: Add note on `RULE_ID` rule" or "docs: Update note for `RULE_ID` rule"

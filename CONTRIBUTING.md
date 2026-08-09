@@ -5,11 +5,11 @@
 
 > [!IMPORTANT]
 > Every `.globalconfig` **needs** an `is_global = true` top level entry.  
-> All config files in this repository should be `.globalconfigs` to ensure wildcard imports work as intended.
+> All config files in this repository should use the `.globalconfig` extension to ensure wildcard imports work as intended.
 
 ### Useful links
 - [How is the rule order applied?](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#precedence)
-- [About .globalconfigs](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#global-analyzerconfig)
+- [About .globalconfig files](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#global-analyzerconfig)
 - [Distributing as NuGet pkg](https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/configuration-files#distribution-in-nuget-packages)
 
 ## Modifying and adding new rule(s)
@@ -24,26 +24,28 @@
   New file should follow the existing naming and descriptive convention to maintain consistency with other config files.
 
 ## Building & Local testing
-Run this command in the repository root to generate `.nupkg` file in `local-packages/` directory:
-```bash
-dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages -p:PackageVersion=0.0.1
+Use a unique prerelease version for every local package so NuGet does not reuse a previous build from its global package cache. Run one of the following command blocks from the repository root.
+
+### PowerShell
+```powershell
+$localPackageVersion = "0.0.1-local.$([DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds())"
+dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages "-p:PackageVersion=$localPackageVersion"
+dotnet nuget add source (Resolve-Path ./local-packages).Path -n KiruyutoDotNetConfigLocal
 ```
 
-After that, you can add the generated package as a local source in your projects to test it out.
+### Bash
 ```bash
-dotnet nuget add source "$(cygpath -w "$(pwd)/local-packages")" -n KiruyutoDotNetConfigLocal
+local_package_version="0.0.1-local.$(date +%s)"
+dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages -p:PackageVersion="$local_package_version"
+dotnet nuget add source "$(pwd)/local-packages" -n KiruyutoDotNetConfigLocal
 ```
+
+Use the generated prerelease version when adding `Kiruyuto.DotNet.Config` to the project under test.
 
 Then run this command to check if source was added:
 ```bash
 dotnet nuget list source
 ```
-
-> [!TIP]
-> You can run this one-liner to do above steps at once:
-> ```bash
-> dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages -p:PackageVersion=0.0.1 && dotnet nuget add source "$(cygpath -w "$(pwd)/local-packages")" -n KiruyutoDotNetConfigLocal && dotnet nuget list source
-> ```
 
 When you are done testing and want to remove the local source, run:
 ```bash
