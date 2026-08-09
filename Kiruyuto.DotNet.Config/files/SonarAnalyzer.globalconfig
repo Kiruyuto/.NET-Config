@@ -2,7 +2,7 @@ is_global = true
 
 # ====================================================================================================
 # Description: Contains SonarAnalyzer-specific code analysis rules
-# Help link: https://next.sonarqube.com/sonarqube/coding_rules?languages=cs&selected=csharpsquid%3AS1698
+# Help link: https://rules.sonarsource.com/csharp/
 # ====================================================================================================
 
 # General or reserved exceptions should never be thrown
@@ -32,4 +32,4 @@ dotnet_diagnostic.S3928.severity = none
 
 # Logging arguments should be passed to the correct parameter
 # Help link: https://rules.sonarsource.com/csharp/RSPEC-6668/
-dotnet_diagnostic.S6668.severity = none
+dotnet_diagnostic.S6668.severity = warning

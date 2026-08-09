@@ -11,8 +11,8 @@ P:System.DateTimeOffset.Now;Use System.DateTimeOffset.UtcNow instead
 
 T:Newtonsoft.Json.JsonConvert;Use System.Text.Json.JsonSerializer instead
 
-M:System.Enum.TryParse(System.Type,System.String,System.Object);Use an overload with a ignoreCase argument
-M:System.Enum.TryParse(System.Type,System.ReadOnlySpan{System.Char},System.Object);Use an overload with a ignoreCase argument
+M:System.Enum.TryParse(System.Type,System.String,System.Object@);Use an overload with a ignoreCase argument
+M:System.Enum.TryParse(System.Type,System.ReadOnlySpan{System.Char},System.Object@);Use an overload with a ignoreCase argument
 M:System.Enum.TryParse``1(System.String,``0@);Use an overload with a ignoreCase argument
 M:System.Enum.TryParse``1(System.ReadOnlySpan{System.Char},``0@);Use an overload with a ignoreCase argument
 
@@ -30,23 +30,59 @@ M:System.Math.Round(System.Double,System.Int32);Use an overload with a MidpointR
 M:System.MathF.Round(System.Single);Use an overload with a MidpointRounding argument
 M:System.MathF.Round(System.Single,System.Int32);Use an overload with a MidpointRounding argument
 
-P:System.Collections.Concurrent.ConcurrentDictionary`2.Count;Count enumerates all internal buckets to produce an accurate count while holding *all* internal locks. This will live-lock and cause CPU starvation under contention
-P:System.Collections.Concurrent.ConcurrentDictionary`2.Keys;Keys snapshots the entire collection by acquiring *all* internal locks and copying the keys to a new array. This will live-lock and cause CPU starvation under contention
-P:System.Collections.Concurrent.ConcurrentDictionary`2.Values;Values snapshots the entire collection by acquiring *all* internal locks and copying the values to a new array. This will live-lock and cause CPU starvation
+P:System.Collections.Concurrent.ConcurrentDictionary`2.Count;Acquires all internal locks and sums per-lock counts. Avoid repeated calls under write contention; use IsEmpty for emptiness checks
+P:System.Collections.Concurrent.ConcurrentDictionary`2.Keys;Acquires all internal locks and allocates an O(n) snapshot. Avoid in contended hot paths
+P:System.Collections.Concurrent.ConcurrentDictionary`2.Values;Acquires all internal locks and allocates an O(n) snapshot. Avoid in contended hot paths
 P:NonBlocking.ConcurrentDictionary`2.Keys;Keys snapshots the entire collection. On large dictionaries this will cause LOH allocations
 P:NonBlocking.ConcurrentDictionary`2.Values;Values snapshots the entire collection. On large dictionaries this will cause LOH allocations
 
-M:System.Threading.SemaphoreSlim.Wait();Do not block threads. Use asynchronous APIs instead
-M:System.Threading.SemaphoreSlim.WaitAsync();Do not suspend tasks indefinitely. Use either a timeout or a CancellationToken to ensure tasks can complete
+M:System.Threading.SemaphoreSlim.Wait;Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.Wait(System.Int32);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.Wait(System.Int32,System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.Wait(System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.Wait(System.TimeSpan);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.Wait(System.TimeSpan,System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.SemaphoreSlim.WaitAsync;Do not suspend tasks indefinitely. Use either a timeout or a CancellationToken to ensure tasks can complete
 
 M:System.Threading.Thread.#ctor(System.Threading.ThreadStart);Do not create threads directly. Use tasks and async methods instead
+M:System.Threading.Thread.#ctor(System.Threading.ThreadStart,System.Int32);Do not create threads directly. Use tasks and async methods instead
+M:System.Threading.Thread.#ctor(System.Threading.ParameterizedThreadStart);Do not create threads directly. Use tasks and async methods instead
+M:System.Threading.Thread.#ctor(System.Threading.ParameterizedThreadStart,System.Int32);Do not create threads directly. Use tasks and async methods instead
+M:System.Threading.Thread.Join;Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Thread.Join(System.Int32);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Thread.Join(System.TimeSpan);Do not block threads. Use asynchronous APIs instead
 M:System.Threading.Thread.Sleep(System.Int32);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Thread.Sleep(System.TimeSpan);Do not block threads. Use asynchronous APIs instead
 
-M:System.Threading.Tasks.Task.Wait();Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.Wait;Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.Wait(System.Int32);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.Wait(System.Int32,System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.Wait(System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.Wait(System.TimeSpan);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.Wait(System.TimeSpan,System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAll(System.Collections.Generic.IEnumerable{System.Threading.Tasks.Task},System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAll(System.ReadOnlySpan{System.Threading.Tasks.Task});Do not block threads. Use asynchronous APIs instead
 M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[]);Do not block threads. Use asynchronous APIs instead
-P:System.Threading.Tasks.Task`1.Result;Do not block threads. Use asynchronous APIs instead. If you need to unwrap already awaited task - Refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[]);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.Int32);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.Threading.CancellationToken);Do not block threads. Use asynchronous APIs instead
+M:System.Threading.Tasks.Task.WaitAny(System.Threading.Tasks.Task[],System.TimeSpan);Do not block threads. Use asynchronous APIs instead
+P:System.Threading.Tasks.Task`1.Result;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+P:System.Threading.Tasks.ValueTask`1.Result;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly
 
-M:System.Runtime.CompilerServices.TaskAwaiter`1.GetResult();Do not block threads. Use asynchronous APIs instead. If you need to unwrap already awaited task - Refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+M:System.Runtime.CompilerServices.TaskAwaiter.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+M:System.Runtime.CompilerServices.TaskAwaiter`1.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable.ConfiguredTaskAwaiter.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+M:System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly. Keep in mind that tasks can be awaited multiple times
+M:System.Runtime.CompilerServices.ValueTaskAwaiter.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly
+M:System.Runtime.CompilerServices.ValueTaskAwaiter`1.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly
+M:System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable.ConfiguredValueTaskAwaiter.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly
+M:System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable`1.ConfiguredValueTaskAwaiter.GetResult;Do not block threads. Use asynchronous APIs instead. If you need to unwrap an already awaited task, refactor your code to await it directly
 
 P:System.IO.FileSystemInfo.CreationTime;Use CreationTimeUtc instead
 P:System.IO.FileSystemInfo.LastAccessTime;Use LastAccessTimeUtc instead

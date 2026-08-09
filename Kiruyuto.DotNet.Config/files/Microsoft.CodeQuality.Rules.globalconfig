@@ -297,7 +297,7 @@ dotnet_diagnostic.CA1420.severity = warning
 
 # CA1421: Method uses runtime marshalling when DisableRuntimeMarshallingAttribute is applied
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1421
-dotnet_diagnostic.CA1421.severity = suggestion
+dotnet_diagnostic.CA1421.severity = warning
 
 # CA1422: Validate platform compatibility - obsoleted APIs
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1422
@@ -444,7 +444,7 @@ dotnet_diagnostic.CA1727.severity = warning
 
 # CA1802: Use literals where appropriate
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1802
-dotnet_diagnostic.CA1802.severity = warning
+dotnet_diagnostic.CA1802.severity = suggestion
 
 # CA1805: Do not initialize unnecessarily
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1805
@@ -456,7 +456,7 @@ dotnet_diagnostic.CA1806.severity = warning
 
 # CA1810: Initialize reference type static fields inline
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1810
-dotnet_diagnostic.CA1810.severity = warning
+dotnet_diagnostic.CA1810.severity = suggestion
 
 # CA1812: Avoid uninstantiated internal classes
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1812
@@ -469,7 +469,7 @@ dotnet_diagnostic.CA1813.severity = warning
 
 # CA1814: Prefer jagged arrays over multidimensional
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1814
-dotnet_diagnostic.CA1814.severity = warning
+dotnet_diagnostic.CA1814.severity = suggestion
 
 # CA1815: Override equals and operator equals on value types
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1815
@@ -490,7 +490,7 @@ dotnet_diagnostic.CA1821.severity = warning
 
 # CA1822: Mark members as static
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1822
-dotnet_diagnostic.CA1822.severity = warning
+dotnet_diagnostic.CA1822.severity = suggestion
 
 # CA1823: Avoid unused private fields
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1823
@@ -607,11 +607,11 @@ dotnet_diagnostic.CA1850.severity = warning
 
 # CA1851: Possible multiple enumerations of 'IEnumerable' collection
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1851
-dotnet_diagnostic.CA1851.severity = warning
+dotnet_diagnostic.CA1851.severity = suggestion
 
 # CA1852: Seal internal types
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1852
-dotnet_diagnostic.CA1852.severity = warning
+dotnet_diagnostic.CA1852.severity = suggestion
 
 # CA1853: Unnecessary call to 'Dictionary.ContainsKey(key)'
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1853
@@ -639,7 +639,7 @@ dotnet_diagnostic.CA1858.severity = warning
 
 # CA1859: Use concrete types when possible for improved performance
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1859
-dotnet_diagnostic.CA1859.severity = warning
+dotnet_diagnostic.CA1859.severity = suggestion
 
 # CA1860: Avoid using 'Enumerable.Any()' extension method
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1860
@@ -647,11 +647,11 @@ dotnet_diagnostic.CA1860.severity = warning
 
 # CA1861: Avoid constant arrays as arguments
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1861
-dotnet_diagnostic.CA1861.severity = warning
+dotnet_diagnostic.CA1861.severity = suggestion
 
 # CA1862: Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1862
-dotnet_diagnostic.CA1862.severity = warning
+dotnet_diagnostic.CA1862.severity = suggestion
 
 # CA1863: Use 'CompositeFormat'
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1863
@@ -692,7 +692,7 @@ dotnet_diagnostic.CA1872.severity = warning
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1873
 # Note: Analyze calls at debug level and below. 
 #       This setting shifts responsibility to the developer to exercise proper judgment and good logging practices
-dotnet_diagnostic.CA1873.severity = warning
+dotnet_diagnostic.CA1873.severity = suggestion
 dotnet_code_quality.CA1873.max_log_level = debug
 
 # CA1874: Use 'Regex.IsMatch'
@@ -1195,8 +1195,8 @@ dotnet_diagnostic.CA2200.severity = warning
 
 # CA2201: Do not raise reserved exception types
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2201
-# Note: Disabled to allow throwing System.Exception as needed
-dotnet_diagnostic.CA2201.severity = none
+# Note: A suggestion permits throwing System.Exception when needed without failing builds
+dotnet_diagnostic.CA2201.severity = suggestion
 
 # CA2207: Initialize value type static fields inline
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2207
@@ -1229,7 +1229,7 @@ dotnet_diagnostic.CA2216.severity = warning
 # CA2217: Do not mark enums with FlagsAttribute
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2217
 dotnet_diagnostic.CA2217.severity = warning
-dotnet_diagnostic.CA2217.api_surface = all
+dotnet_code_quality.CA2217.api_surface = all
 
 # CA2218: Override GetHashCode on overriding Equals
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2218

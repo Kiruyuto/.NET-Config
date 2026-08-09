@@ -10,7 +10,7 @@ is_global = true
 resharper_csharp_max_line_length = 220
 resharper_max_attribute_length_for_same_line = 120
 resharper_class_never_instantiated_global_highlighting = none
-resharper_template_is_not_compile_time_constant_problem_highlighting = error
+resharper_c_sharp_warnings_ca2254_highlighting = error
 
 # Code inspection: Redundant empty argument list on object creation expression
 # Help link: https://www.jetbrains.com/help/resharper/RedundantEmptyObjectCreationArgumentList.html
