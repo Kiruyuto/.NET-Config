@@ -34,9 +34,9 @@ dotnet_diagnostic.IDE0005.severity = warning
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0007-ide0008
 dotnet_diagnostic.IDE0007.severity = warning
 dotnet_diagnostic.IDE0008.severity = warning
-csharp_style_var_for_built_in_types = false:warning
+csharp_style_var_for_built_in_types = true:warning
 csharp_style_var_when_type_is_apparent = true:warning
-csharp_style_var_elsewhere = false:warning
+csharp_style_var_elsewhere = true:warning
 
 # IDE0010: Add missing cases to switch statement
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0010
@@ -46,7 +46,7 @@ dotnet_diagnostic.IDE0010.severity = silent
 # IDE0011: Add braces
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0011
 dotnet_diagnostic.IDE0011.severity = warning
-csharp_prefer_braces = always:warning
+csharp_prefer_braces = when_multiline
 
 # IDE0016: Use throw expression
 # Help link: https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0016
