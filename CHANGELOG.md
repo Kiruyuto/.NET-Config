@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/Kiruyuto/.NET-Config/compare/config-3.0.0...config-3.0.1) (2026-08-10)
+
+
+### Bug Fixes
+
+* Restore var and single-line brace preferences ([02236b8](https://github.com/Kiruyuto/.NET-Config/commit/02236b81933fdaa0201492552d4b85c74064684c))
+
 ## [3.0.0](https://github.com/Kiruyuto/.NET-Config/compare/config-2.4.14...config-3.0.0) (2026-08-09)
 
 
