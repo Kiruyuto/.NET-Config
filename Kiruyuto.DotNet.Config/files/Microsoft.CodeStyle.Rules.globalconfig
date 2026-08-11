@@ -572,13 +572,21 @@ dotnet_naming_symbols.interfaces.applicable_accessibilities = *
 dotnet_naming_style.begins_with_i_style.required_prefix = I
 dotnet_naming_style.begins_with_i_style.capitalization = pascal_case
 
-# Class names should be 'PascalCase'
+# Namespace names should be 'PascalCase'
+# Example: namespace MyApplication.Services;
+dotnet_naming_rule.namespaces_should_be_pascal_case.severity = warning
+dotnet_naming_rule.namespaces_should_be_pascal_case.symbols = namespaces
+dotnet_naming_rule.namespaces_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.namespaces.applicable_kinds = namespace
+dotnet_naming_symbols.namespaces.applicable_accessibilities = *
+
+# Class, record, struct, enum, and delegate names should be 'PascalCase'
 # Example: class MyClass { }
-dotnet_naming_rule.classes_should_be_pascal_case.severity = warning
-dotnet_naming_rule.classes_should_be_pascal_case.symbols = classes
-dotnet_naming_rule.classes_should_be_pascal_case.style = pascal_case
-dotnet_naming_symbols.classes.applicable_kinds = class
-dotnet_naming_symbols.classes.applicable_accessibilities = *
+dotnet_naming_rule.types_should_be_pascal_case.severity = warning
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.types.applicable_kinds = class, struct, enum, delegate
+dotnet_naming_symbols.types.applicable_accessibilities = *
 dotnet_naming_style.pascal_case.capitalization = pascal_case
 
 # Method names should be 'PascalCase'
@@ -588,6 +596,22 @@ dotnet_naming_rule.methods_should_be_pascal_case.symbols = methods
 dotnet_naming_rule.methods_should_be_pascal_case.style = pascal_case
 dotnet_naming_symbols.methods.applicable_kinds = method
 dotnet_naming_symbols.methods.applicable_accessibilities = *
+
+# Property and event names should be 'PascalCase'
+# Example: public string MyProperty { get; }
+dotnet_naming_rule.properties_and_events_should_be_pascal_case.severity = warning
+dotnet_naming_rule.properties_and_events_should_be_pascal_case.symbols = properties_and_events
+dotnet_naming_rule.properties_and_events_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.properties_and_events.applicable_kinds = property, event
+dotnet_naming_symbols.properties_and_events.applicable_accessibilities = *
+
+# Publicly visible field names should be 'PascalCase' and have no prefix
+# Example: public int MyField;
+dotnet_naming_rule.public_fields_should_be_pascal_case.severity = warning
+dotnet_naming_rule.public_fields_should_be_pascal_case.symbols = public_fields
+dotnet_naming_rule.public_fields_should_be_pascal_case.style = pascal_case
+dotnet_naming_symbols.public_fields.applicable_kinds = field
+dotnet_naming_symbols.public_fields.applicable_accessibilities = public, protected, protected_internal
 
 # 'Parameters' and 'locals' should be 'camelCase'
 # Example: void MyMethod(int myParameter) { var myLocal = myParameter; }
@@ -629,13 +653,13 @@ dotnet_naming_rule.local_functions_should_be_pascal_case.symbols = local_functio
 dotnet_naming_rule.local_functions_should_be_pascal_case.style = pascal_case
 dotnet_naming_symbols.local_functions.applicable_kinds = local_function
 
-# Private instance fields start with '_' and are 'camelCase'
+# Private, internal, and private-protected instance fields start with '_' and are 'camelCase'
 # Example: private int _myField;
-dotnet_naming_rule.private_instance_fields_should_start_with_underscore.severity = warning
-dotnet_naming_rule.private_instance_fields_should_start_with_underscore.symbols = private_instance_fields
-dotnet_naming_rule.private_instance_fields_should_start_with_underscore.style = underscore_camel_case
-dotnet_naming_symbols.private_instance_fields.applicable_kinds = field
-dotnet_naming_symbols.private_instance_fields.applicable_accessibilities = private
+dotnet_naming_rule.non_public_instance_fields_should_start_with_underscore.severity = warning
+dotnet_naming_rule.non_public_instance_fields_should_start_with_underscore.symbols = non_public_instance_fields
+dotnet_naming_rule.non_public_instance_fields_should_start_with_underscore.style = underscore_camel_case
+dotnet_naming_symbols.non_public_instance_fields.applicable_kinds = field
+dotnet_naming_symbols.non_public_instance_fields.applicable_accessibilities = private, internal, private_protected
 dotnet_naming_style.underscore_camel_case.required_prefix = _
 dotnet_naming_style.underscore_camel_case.capitalization = camel_case
 
