@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://github.com/Kiruyuto/.NET-Config/compare/config-3.0.1...config-3.1.0) (2026-08-12)
+
+
+### Features & Enhancements
+
+* Expand naming convention enforcement ([8524dcd](https://github.com/Kiruyuto/.NET-Config/commit/8524dcd98acf6d6a057f85460db4d40932081714))
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies ([#149](https://github.com/Kiruyuto/.NET-Config/issues/149)) ([5a73a43](https://github.com/Kiruyuto/.NET-Config/commit/5a73a4309a34050c7790b8eebd9ef6a21c0e8483))
+
 ## [3.0.1](https://github.com/Kiruyuto/.NET-Config/compare/config-3.0.0...config-3.0.1) (2026-08-10)
 
 
