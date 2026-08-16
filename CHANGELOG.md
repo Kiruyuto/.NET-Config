@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/Kiruyuto/.NET-Config/compare/config-3.1.0...config-3.1.1) (2026-08-16)
+
+
+### Bug Fixes
+
+* Suppress missing XML comment warnings ([b13a335](https://github.com/Kiruyuto/.NET-Config/commit/b13a3359ae0ef40104de12e8b8292bcddbecf8c7))
+
 ## [3.1.0](https://github.com/Kiruyuto/.NET-Config/compare/config-3.0.1...config-3.1.0) (2026-08-12)
 
 
