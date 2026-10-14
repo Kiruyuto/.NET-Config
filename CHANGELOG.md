@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.2](https://github.com/Kiruyuto/.NET-Config/compare/config-3.1.1...config-3.1.2) (2026-10-14)
+
+
+### Chores
+
+* **dependencies:** Update .NET non-Major dependencies ([#151](https://github.com/Kiruyuto/.NET-Config/issues/151)) ([70fb0c6](https://github.com/Kiruyuto/.NET-Config/commit/70fb0c6636047839c687db77dac77acd3eaa3ac4))
+
 ## [3.1.1](https://github.com/Kiruyuto/.NET-Config/compare/config-3.1.0...config-3.1.1) (2026-08-16)
 
 
