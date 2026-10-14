@@ -20,7 +20,7 @@ jobs:
       version: ${{ steps.run-release-please.outputs.version }}
     steps:
       - name: "Generate App Token"
-        uses: actions/create-github-app-token@v3.2.0
+        uses: actions/create-github-app-token@v3.3.0
         id: generate-token
         with:
           client-id: ${{ secrets.DEV_APP_CLIENT_ID }}
