@@ -4,6 +4,8 @@
   "group-pull-request-title-pattern": "chore(ci): Release `${branch}`",
   "separate-pull-requests": true,
   "prerelease": false,
+  "draft": true,
+  "force-tag-creation": true,
   "draft-pull-request": false,
   "pull-request-header": "👇 Changelog 👇",
   "include-v-in-tag": false,
