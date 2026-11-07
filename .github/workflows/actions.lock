@@ -5,16 +5,16 @@ version: 'v0.0.3'
 workflows:
     '.github/workflows/ci.yml':
         - 'actions/checkout@v7.0.1'
-        - 'actions/setup-dotnet@v6.0.0'
+        - 'actions/setup-dotnet@v6.1.0'
     '.github/workflows/pr-management.yml':
         - 'actions/create-github-app-token@v3.3.0'
-        - 'amannn/action-semantic-pull-request@v6.1.1'
+        - 'amannn/action-semantic-pull-request@v6.1.2'
         - 'marocchino/sticky-pull-request-comment@v3.0.5'
     '.github/workflows/release.yml':
         - 'actions/attest@v4.2.2'
         - 'actions/checkout@v7.0.1'
         - 'actions/create-github-app-token@v3.3.0'
-        - 'actions/setup-dotnet@v6.0.0'
+        - 'actions/setup-dotnet@v6.1.0'
         - 'googleapis/release-please-action@v5.0.0'
         - 'nuget/login@v1.2.0'
 dependencies:
@@ -33,14 +33,14 @@ dependencies:
         commit: 'sha1-64ab729a6294000f5aa4a4bc0b73d1f32bc45510'
         owner_id: 44036562
         repo_id: 642580244
-    'actions/setup-dotnet@v6.0.0':
-        ref: 'v6.0.0'
-        commit: 'sha1-a98b56852c35b8e3190ac28c8c2271da59106c68'
+    'actions/setup-dotnet@v6.1.0':
+        ref: 'v6.1.0'
+        commit: 'sha1-0f4a354dd5547a28c70b7853dbd95d5b67886e73'
         owner_id: 44036562
         repo_id: 192625306
-    'amannn/action-semantic-pull-request@v6.1.1':
-        ref: 'v6.1.1'
-        commit: 'sha1-48f256284bd46cdaab1048c3721360e808335d50'
+    'amannn/action-semantic-pull-request@v6.1.2':
+        ref: 'v6.1.2'
+        commit: 'sha1-2252a14e810aa9b85c2d560bd7070c802206ecf6'
         owner_id: 4038316
         repo_id: 220418983
     'googleapis/release-please-action@v5.0.0':
