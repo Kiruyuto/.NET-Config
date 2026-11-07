@@ -31,7 +31,7 @@ jobs:
 
       - name: "Check PR Title"
         id: lint_pr_title
-        uses: amannn/action-semantic-pull-request@v6.1.1
+        uses: amannn/action-semantic-pull-request@v6.1.2
         with:
           wip: true
           types: |
