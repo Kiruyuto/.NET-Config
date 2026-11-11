@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Kiruyuto.DotNet.Config.Tests/Kiruyuto.DotNet.Config.Tests.csproj" />
+  </Folder>
   <Project Path="Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj" />
 </Solution>
