@@ -21,7 +21,7 @@
 
   <PropertyGroup Label="Analyzer related settings">
     <!-- https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/overview?#enable-additional-rules -->
-    <AnalysisLevel>10-all</AnalysisLevel>
+    <AnalysisLevel>11-all</AnalysisLevel>
 
     <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
     <ReportAnalyzer>true</ReportAnalyzer>

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Personal set of rules, analyzers, and build defaults distributed as a NuGet package for .NET 10 C# projects.
+  Personal set of rules, analyzers, and build defaults distributed as a NuGet package for .NET 11 C# projects.
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@ Add the [NuGet package](https://www.nuget.org/packages/Kiruyuto.DotNet.Config/#v
 ### Direct package reference
 ```xml
 <ItemGroup>
-  <PackageReference Include="Kiruyuto.DotNet.Config" Version="2.4.14" PrivateAssets="all" />
+  <PackageReference Include="Kiruyuto.DotNet.Config" Version="4.0.0" PrivateAssets="all" />
 </ItemGroup>
 ```
 
@@ -38,7 +38,7 @@ Add the [NuGet package](https://www.nuget.org/packages/Kiruyuto.DotNet.Config/#v
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Include="Kiruyuto.DotNet.Config" Version="2.4.14" />
+    <PackageVersion Include="Kiruyuto.DotNet.Config" Version="4.0.0" />
   </ItemGroup>
 </Project>
 ```
@@ -58,11 +58,11 @@ The package imports the following policy into consuming projects:
 | Area | Defaults |
 | --- | --- |
 | C# projects | Enables nullable reference types, implicit usings, unsafe code, deterministic builds, and XML documentation. Adds global usings for `System.Diagnostics.CodeAnalysis` and `System.Text`, and disables `CS1591`. |
-| Analysis | Enables .NET analyzers and build-time code-style analysis using `AnalysisLevel=10-all`, strict compiler features, the packaged rule configurations, banned APIs, and analyzer timing reports. |
+| Analysis | Enables .NET analyzers and build-time code-style analysis using `AnalysisLevel=11-all`, strict compiler features, the packaged rule configurations, banned APIs, and analyzer timing reports. |
 | Release and CI | Release builds enable optimization and treat MSBuild warnings as errors. CI builds also set `ContinuousIntegrationBuild` and treat compiler and analyzer warnings as errors. |
 | Package authoring | Unless overridden, `RepositoryType=git`, `EmbedUntrackedSources=true`, and `DebugType=embedded` are applied to consumer projects. Embedded PDBs travel inside assemblies; no separate `.snupkg` is generated. |
 
-This is intentionally strict: warnings can fail Release and CI builds. `10-all` pins the built-in analyzer profile to .NET 10.
+This is intentionally strict: warnings can fail Release and CI builds. `11-all` pins the built-in analyzer profile to .NET 11.
 
 ### Overriding defaults
 NuGet package build props are imported before the body of a consuming project file. Defaults whose values are conditional on being empty can be preselected in `Directory.Build.props`. Any setting can be overridden later in the project file or in `Directory.Build.targets`; use `Directory.Build.targets` for repository-wide overrides that must win over this package's unconditional assignments.
