@@ -5,9 +5,9 @@
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.NugetAuthoring.props" />
 
   <PropertyGroup Label="Shared settings applicable to all build configurations">
-    <Nullable Condition="'$(Nullable)' == ''">enable</Nullable>
-    <AllowUnsafeBlocks Condition="'$(AllowUnsafeBlocks)' == ''">true</AllowUnsafeBlocks>
-    <ImplicitUsings Condition="'$(ImplicitUsings)' == ''">enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ImplicitUsings>enable</ImplicitUsings>
 
     <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/code-generation#deterministic -->
     <Deterministic>true</Deterministic>
