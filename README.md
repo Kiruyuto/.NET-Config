@@ -58,7 +58,8 @@ The package imports the following policy into consuming projects:
 | Area | Defaults |
 | --- | --- |
 | C# projects | Enables nullable reference types, implicit usings, unsafe code, deterministic builds, and XML documentation. Adds global usings for `System.Diagnostics.CodeAnalysis` and `System.Text`, and disables `CS1591`. |
-| Analysis | Enables .NET analyzers and build-time code-style analysis using `AnalysisLevel=11-all`, strict compiler features, the packaged rule configurations, banned APIs, and analyzer timing reports. |
+| Analysis | Enables .NET analyzers and build-time code-style analysis using `AnalysisLevel=11-all`, strict C# compiler checking, the packaged rule configurations, banned APIs, and analyzer timing reports. |
+| Runtime async | Unconditionally enables runtime-native async for consuming projects. Existing compiler feature flags are preserved. |
 | Release and CI | Release builds enable optimization and treat MSBuild warnings as errors. CI builds also set `ContinuousIntegrationBuild` and treat compiler and analyzer warnings as errors. |
 | Package authoring | Unless overridden, `RepositoryType=git`, `EmbedUntrackedSources=true`, and `DebugType=embedded` are applied to consumer projects. Embedded PDBs travel inside assemblies; no separate `.snupkg` is generated. |
 

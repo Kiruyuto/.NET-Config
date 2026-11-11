@@ -26,8 +26,9 @@
     <!-- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings#reportanalyzer -->
     <ReportAnalyzer>true</ReportAnalyzer>
 
+    <!-- Enforce the C# specification in cases otherwise relaxed for compatibility with older compilers. -->
     <!-- https://github.com/dotnet/runtime/issues/27005#issuecomment-408646070 -->
-    <Features>strict</Features>
+    <Features>$(Features);strict</Features>
 
     <!-- https://learn.microsoft.com/en-us/visualstudio/code-quality/install-net-analyzers -->
     <EnableNETAnalyzers>true</EnableNETAnalyzers>

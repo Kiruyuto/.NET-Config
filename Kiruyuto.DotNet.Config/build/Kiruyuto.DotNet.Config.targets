@@ -1,4 +1,15 @@
 <Project>
+  <!-- Enable runtime async after the consuming project has been evaluated. -->
+  <!-- https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-11/runtime#runtime-async -->
+  <PropertyGroup Label="Runtime async">
+    <Features>$(Features);runtime-async=on</Features>
+  </PropertyGroup>
+
+  <!-- Compiler feature changes must invalidate incremental compilation. -->
+  <ItemGroup>
+    <CoreCompileCache Include="$(Features)" />
+  </ItemGroup>
+
   <Target Name="KiruyutoDotNetConfigValidateCompatibility" BeforeTargets="PrepareForBuild" Condition="'$(IsCrossTargetingBuild)' != 'true'">
     <Error Code="KDC1001"
       Condition="'$(TargetFrameworkIdentifier)' != '.NETCoreApp' OR '$(TargetFrameworkVersion)' != 'v11.0'"
