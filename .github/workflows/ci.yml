@@ -40,7 +40,7 @@ jobs:
         run: dotnet test --no-restore --no-build --verbosity diagnostic --configuration Release
 
       - name: "Pack"
-        run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=999.9.9
+        run: dotnet pack Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=999.9.9
 
       - name: "Build consumer project"
         shell: bash

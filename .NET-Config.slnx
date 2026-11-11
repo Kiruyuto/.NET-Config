@@ -1,6 +1,12 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="global.json" />
+  </Folder>
+  <Folder Name="/Source/">
+    <Project Path="Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj" />
+  </Folder>
   <Folder Name="/Tests/">
     <Project Path="Tests/Kiruyuto.DotNet.Config.Tests/Kiruyuto.DotNet.Config.Tests.csproj" />
   </Folder>
-  <Project Path="Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj" />
 </Solution>

@@ -18,7 +18,7 @@
       <HintPath>$(PkgAsyncFixer)\analyzers\dotnet\cs\AsyncFixer.dll</HintPath>
       <Private>true</Private>
     </Reference>
-    <None Include="..\..\Kiruyuto.DotNet.Config\files\AsyncFixer.globalconfig" Link="Configurations\AsyncFixer.globalconfig" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\Source\Kiruyuto.DotNet.Config\files\AsyncFixer.globalconfig" Link="Configurations\AsyncFixer.globalconfig" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
   <ItemGroup>
