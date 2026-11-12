@@ -29,3 +29,14 @@ jobs:
 
       - name: "Pack"
         run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=0.0.1
+
+      - name: "Build consumer project"
+        shell: bash
+        env:
+          CONSUMER_DIR: "${{ runner.temp }}/dotnet-config-consumer"
+          CONSUMER_PROJECT: "${{ runner.temp }}/dotnet-config-consumer/ConfigConsumer.csproj"
+        run: |
+          dotnet new console --name ConfigConsumer --framework net11.0 --output "$CONSUMER_DIR" --no-restore
+          dotnet add "$CONSUMER_PROJECT" package Kiruyuto.DotNet.Config --version 0.0.1 --no-restore
+          dotnet restore "$CONSUMER_PROJECT" --source "$GITHUB_WORKSPACE" --source https://api.nuget.org/v3/index.json
+          dotnet build "$CONSUMER_PROJECT" --configuration Release --no-restore
