@@ -27,8 +27,20 @@ jobs:
         with:
           global-json-file: "global.json"
 
+      - name: "Restore dependencies"
+        run: dotnet restore
+
+      - name: "Build"
+        run: dotnet build --no-restore --verbosity minimal --configuration Release
+
+      - name: "Format"
+        run: dotnet format --no-restore --verbosity diagnostic --severity info --verify-no-changes
+
+      - name: "Test"
+        run: dotnet test --no-restore --no-build --verbosity diagnostic --configuration Release
+
       - name: "Pack"
-        run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=0.0.1
+        run: dotnet pack Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o . -p:PackageVersion=999.9.9
 
       - name: "Build consumer project"
         shell: bash
@@ -37,6 +49,6 @@ jobs:
           CONSUMER_PROJECT: "${{ runner.temp }}/dotnet-config-consumer/ConfigConsumer.csproj"
         run: |
           dotnet new console --name ConfigConsumer --framework net11.0 --output "$CONSUMER_DIR" --no-restore
-          dotnet add "$CONSUMER_PROJECT" package Kiruyuto.DotNet.Config --version 0.0.1 --no-restore
+          dotnet add "$CONSUMER_PROJECT" package Kiruyuto.DotNet.Config --version 999.9.9 --no-restore
           dotnet restore "$CONSUMER_PROJECT" --source "$GITHUB_WORKSPACE" --source https://api.nuget.org/v3/index.json
           dotnet build "$CONSUMER_PROJECT" --configuration Release --no-restore

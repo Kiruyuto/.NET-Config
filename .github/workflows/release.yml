@@ -68,7 +68,7 @@ jobs:
           global-json-file: "global.json"
 
       - name: "Pack"
-        run: dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o outputFiles -p:PackageVersion=${{ needs.release-please.outputs.version }}
+        run: dotnet pack Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o outputFiles -p:PackageVersion=${{ needs.release-please.outputs.version }}
 
       - name: "Attest package provenance"
         uses: actions/attest@v4.2.2

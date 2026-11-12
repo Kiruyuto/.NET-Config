@@ -14,13 +14,13 @@
 
 ## Modifying and adding new rule(s)
 - If modifying existing rule(s):
-  - Edit appropriate `.globalconfig` file in [`files/`](./Kiruyuto.DotNet.Config/files/) directory
+  - Edit appropriate `.globalconfig` file in [`files/`](./Source/Kiruyuto.DotNet.Config/files/) directory
 - If adding new rule(s):
-  - Append new rule(s) to appropriate existing `.globalconfig` file in [`files/`](./Kiruyuto.DotNet.Config/files/) directory
+  - Append new rule(s) to appropriate existing `.globalconfig` file in [`files/`](./Source/Kiruyuto.DotNet.Config/files/) directory
 - If adding new analyzer dependency:
-  - Add new package reference to [`Kiruyuto.DotNet.Config.csproj`](./Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj)
-  - Create new appropriately named `.globalconfig` file in [`files/`](./Kiruyuto.DotNet.Config/files/) directory with `is_global = true` and rule configurations.   
-  This file should be automatically picked up by wildcard import from [`Analyzers.props`](./Kiruyuto.DotNet.Config/build/Kiruyuto.DotNet.Config.Analyzers.props)  
+  - Add new package reference to [`Kiruyuto.DotNet.Config.csproj`](./Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj)
+  - Create new appropriately named `.globalconfig` file in [`files/`](./Source/Kiruyuto.DotNet.Config/files/) directory with `is_global = true` and rule configurations.\
+  This file should be automatically picked up by wildcard import from [`Analyzers.props`](./Source/Kiruyuto.DotNet.Config/build/Kiruyuto.DotNet.Config.Analyzers.props)\
   New file should follow the existing naming and descriptive convention to maintain consistency with other config files.
 
 ## Building & Local testing
@@ -28,15 +28,15 @@ Use a unique prerelease version for every local package so NuGet does not reuse 
 
 ### PowerShell
 ```powershell
-$localPackageVersion = "0.0.1-local.$([DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds())"
-dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages "-p:PackageVersion=$localPackageVersion"
+$localPackageVersion = "999.9.9-local.$([DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds())"
+dotnet pack Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages "-p:PackageVersion=$localPackageVersion"
 dotnet nuget add source (Resolve-Path ./local-packages).Path -n KiruyutoDotNetConfigLocal
 ```
 
 ### Bash
 ```bash
-local_package_version="0.0.1-local.$(date +%s)"
-dotnet pack Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages -p:PackageVersion="$local_package_version"
+local_package_version="999.9.9-local.$(date +%s)"
+dotnet pack Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj -c Release -o ./local-packages -p:PackageVersion="$local_package_version"
 dotnet nuget add source "$(pwd)/local-packages" -n KiruyutoDotNetConfigLocal
 ```
 

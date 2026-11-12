@@ -87,9 +87,9 @@ Diagnostic severities and analyzer options can be customized in a project-owned 
 > The toggle also controls the corresponding VSTHRD103 exclusions. Setting it to `false` removes the async-add bans and stops excluding synchronous `Add`/`AddRange`, so VSTHRD103 may recommend their async counterparts in async methods.
 
 ## Structure overview
-- Dependencies can be found in [Kiruyuto.DotNet.Config.csproj](https://github.com/Kiruyuto/.NET-Config/blob/master/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj)
-- `.globalconfig` rule configurations are located in the [`files/` directory](https://github.com/Kiruyuto/.NET-Config/tree/master/Kiruyuto.DotNet.Config/files)
-- `.props` and `.targets` files are located in the [`build/` directory](https://github.com/Kiruyuto/.NET-Config/tree/master/Kiruyuto.DotNet.Config/build). These are split into categories for improved maintainability
+- Dependencies can be found in [Kiruyuto.DotNet.Config.csproj](https://github.com/Kiruyuto/.NET-Config/blob/master/Source/Kiruyuto.DotNet.Config/Kiruyuto.DotNet.Config.csproj)
+- `.globalconfig` rule configurations are located in the [`files/` directory](https://github.com/Kiruyuto/.NET-Config/tree/master/Source/Kiruyuto.DotNet.Config/files)
+- `.props` and `.targets` files are located in the [`build/` directory](https://github.com/Kiruyuto/.NET-Config/tree/master/Source/Kiruyuto.DotNet.Config/build). These are split into categories for improved maintainability
 
 ## Contributing
 See [CONTRIBUTING.md](https://github.com/Kiruyuto/.NET-Config/blob/master/CONTRIBUTING.md) for guidelines, rule authoring, and local build/testing instructions.
