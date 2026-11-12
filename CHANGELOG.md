@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/Kiruyuto/.NET-Config/compare/config-4.0.0...config-4.0.1) (2026-11-12)
+
+
+### Documentation improvements
+
+* Tidy comments in MSBuild configuration ([ff16f6c](https://github.com/Kiruyuto/.NET-Config/commit/ff16f6c7eedf2ab932bb0812993f6be4b1c5844b))
+
 ## [4.0.0](https://github.com/Kiruyuto/.NET-Config/compare/config-3.1.2...config-4.0.0) (2026-11-12)
 
 
