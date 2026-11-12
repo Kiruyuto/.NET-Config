@@ -1,5 +1,4 @@
 <Project>
-  <!-- Import other props files -->
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.Analyzers.props" />
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.CI.props" />
   <Import Project="$(MSBuildThisFileDirectory)Kiruyuto.DotNet.Config.NugetAuthoring.props" />

@@ -3,11 +3,11 @@
   <PropertyGroup Label="NuGet Authoring">
     <RepositoryType Condition="'$(RepositoryType)' == ''">git</RepositoryType>
 
-    <!-- Embeds files that are not tracked by source control into the PDBs. Helps with source generated files. -->
-    <!-- Set by default for .NET8+ -->
+    <!-- Embeds files that are not tracked by source control into the PDBs. Helps with source generated files -->
+    <!-- Also set by default for .NET8+ -->
     <EmbedUntrackedSources Condition="'$(EmbedUntrackedSources)' == ''">true</EmbedUntrackedSources>
 
-    <!-- Store the Portable PDB inside the assembly; no separate symbol package is generated. -->
+    <!-- Store the Portable PDB inside the assembly; no separate symbol package is generated -->
     <DebugType Condition="'$(DebugType)' == ''">embedded</DebugType>
   </PropertyGroup>
 </Project>
