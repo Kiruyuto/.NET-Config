@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.0.0](https://github.com/Kiruyuto/.NET-Config/compare/config-3.1.2...config-4.0.0) (2026-11-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* Require .NET 11 and enable runtime async ([#158](https://github.com/Kiruyuto/.NET-Config/issues/158))
+
+### Features & Enhancements
+
+* Require .NET 11 and enable runtime async ([#158](https://github.com/Kiruyuto/.NET-Config/issues/158)) ([bd12938](https://github.com/Kiruyuto/.NET-Config/commit/bd129388e56cba664d6eb7ed68dfb49878cdd75e))
+
+
+### Chores
+
+* **dependencies:** Update dependency dotnet-sdk to v10.0.402 ([#155](https://github.com/Kiruyuto/.NET-Config/issues/155)) ([a665333](https://github.com/Kiruyuto/.NET-Config/commit/a66533316ffc57553cc1e4cc42e36bbb57a8220c))
+
 ## [3.1.2](https://github.com/Kiruyuto/.NET-Config/compare/config-3.1.1...config-3.1.2) (2026-10-14)
 
 
