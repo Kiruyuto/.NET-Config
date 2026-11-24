@@ -20,7 +20,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: "Generate App Token"
-        uses: actions/create-github-app-token@v3.3.0
+        uses: actions/create-github-app-token@v3.4.0
         id: generate-token
         with:
           client-id: ${{ secrets.DEV_APP_CLIENT_ID }}
@@ -31,7 +31,7 @@ jobs:
 
       - name: "Check PR Title"
         id: lint_pr_title
-        uses: amannn/action-semantic-pull-request@v6.1.2
+        uses: amannn/action-semantic-pull-request@v6.1.4
         with:
           wip: true
           types: |
